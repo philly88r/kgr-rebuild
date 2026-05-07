@@ -32,5 +32,34 @@
         </div>
         <a href="/kgr-rebuild/" class="inline-block px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-kgr-cyan transition">Back to Home</a>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.getElementById('mobile-menu-toggle');
+            const menu = document.getElementById('mobile-menu');
+            const close = document.getElementById('mobile-menu-close');
+            const overlay = document.getElementById('mobile-overlay');
+            
+            function openMenu() {
+                menu.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                menu.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+            
+            if (toggle) toggle.addEventListener('click', openMenu);
+            if (close) close.addEventListener('click', closeMenu);
+            if (overlay) overlay.addEventListener('click', closeMenu);
+            
+            // Close on nav link click
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        });
+    </script>
 </body>
 </html>
