@@ -11,10 +11,10 @@
                 extend: {
                     colors: {
                         kgr: {
-                            gold: '#C5A059',
-                            navy: '#1B2A41',
-                            teal: '#2D7071',
-                            cream: '#F9F7F2'
+                            gold: '#C2964C', // Exact match from logo gold
+                            navy: '#0A1A2F', // Exact match from logo text
+                            teal: '#2D7071', 
+                            cream: '#FFFFFF'
                         }
                     }
                 }
@@ -23,40 +23,44 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #F9F7F2; }
-        .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); }
+        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; }
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
         .marquee { overflow: hidden; white-space: nowrap; }
         .marquee-content { display: inline-block; animation: marquee 30s linear infinite; }
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .logo-shadow { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05)); }
     </style>
 </head>
 <body class="text-kgr-navy">
     <!-- Navigation -->
-    <header class="fixed top-0 w-full z-50 glass border-b border-kgr-gold/20">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="/kgr-rebuild/index.html" class="flex items-center space-x-3">
-                <div class="w-12 h-12 bg-kgr-gold rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">KGR</div>
-                <span class="text-lg font-bold tracking-tight text-kgr-navy hidden md:block">KGR Health and Wellness Academy</span>
+    <header class="fixed top-0 w-full z-50 glass border-b border-slate-100">
+        <nav class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="/kgr-rebuild/index.html" class="flex items-center space-x-4 group">
+                <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/119a0a03-7f72-4734-9721-085e688f2898/KGR+Logo.png?format=1500w" class="h-16 w-auto logo-shadow transition transform group-hover:scale-105" alt="KGR Logo">
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold tracking-tight text-kgr-navy leading-none">KGR Health and Wellness</span>
+                    <span class="text-sm font-medium text-kgr-gold tracking-[0.2em] uppercase mt-1">Academy</span>
+                </div>
             </a>
-            <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold">
+            <div class="hidden lg:flex items-center space-x-8 text-sm font-bold uppercase tracking-wider">
                 <a href="/kgr-rebuild/about/index.html" class="text-kgr-navy hover:text-kgr-gold transition">Our Team</a>
                 <a href="/kgr-rebuild/services/index.html" class="text-kgr-navy hover:text-kgr-gold transition">NBHWC Certification</a>
                 <a href="/kgr-rebuild/collaborative/index.html" class="text-kgr-navy hover:text-kgr-gold transition">Coaching Collaborative</a>
-                <a href="/kgr-rebuild/contact/index.html" class="px-6 py-2.5 bg-kgr-navy text-white rounded-full hover:bg-kgr-teal transition shadow-md">Contact Us</a>
+                <a href="/kgr-rebuild/contact/index.html" class="px-6 py-3 bg-kgr-navy text-white rounded-full hover:bg-kgr-gold transition shadow-lg">Contact Us</a>
             </div>
         </nav>
     </header>
 
-    <main class="pt-20">
+    <main class="pt-24">
         <!-- Pass Rate / Announcement -->
-        <div class="bg-kgr-teal text-white py-3 text-center text-sm font-bold tracking-wide shadow-inner">
+        <div class="bg-kgr-gold text-white py-3 text-center text-sm font-bold tracking-widest uppercase">
             Our pass rate is 100%!
         </div>
 
         <!-- Marquee Banner -->
-        <div class="bg-kgr-gold/10 py-2 border-b border-kgr-gold/20 marquee">
-            <div class="marquee-content font-bold text-kgr-gold text-xs uppercase tracking-widest">
-                Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - 
+        <div class="bg-slate-50 py-2 border-b border-slate-100 marquee">
+            <div class="marquee-content font-bold text-kgr-navy/40 text-xs uppercase tracking-[0.3em]">
+                Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - 
             </div>
         </div>
 
