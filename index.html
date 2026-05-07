@@ -9,164 +9,147 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
-        .hero-pattern { background-color: #f8fafc; background-image: radial-gradient(#e2e8f0 0.5px, transparent 0.5px); background-size: 20px 20px; }
+        .marquee { overflow: hidden; white-space: nowrap; }
+        .marquee-content { display: inline-block; animation: marquee 30s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
     </style>
 </head>
-<body class="bg-white text-slate-900 selection:bg-emerald-100 selection:text-emerald-900">
-    <!-- Header -->
+<body class="bg-white text-slate-900">
+    <!-- Navigation -->
     <header class="fixed top-0 w-full z-50 glass border-b border-slate-100">
         <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="/kgr-rebuild/index.html" class="flex items-center space-x-2 group">
-                <div class="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-bold group-hover:rotate-6 transition">K</div>
-                <span class="text-xl font-bold tracking-tight text-slate-900">KGR Academy</span>
+            <a href="/kgr-rebuild/index.html" class="flex items-center space-x-2">
+                <span class="text-xl font-bold tracking-tight text-slate-900">KGR Health and Wellness Academy</span>
             </a>
-            
-            <div class="hidden lg:flex items-center space-x-10 text-sm font-semibold text-slate-600">
-                <a href="/kgr-rebuild/index.html" class="text-emerald-600">Home</a>
-                <a href="/kgr-rebuild/about/index.html" class="hover:text-emerald-600 transition">About</a>
-                <a href="/kgr-rebuild/services/index.html" class="hover:text-emerald-600 transition">Services</a>
-                <a href="/kgr-rebuild/communities/index.html" class="hover:text-emerald-600 transition">Communities</a>
-                <a href="/kgr-rebuild/collaborative/index.html" class="hover:text-emerald-600 transition">Collaborative</a>
+            <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                <a href="/kgr-rebuild/about/index.html" class="hover:text-emerald-600 transition">Our Team</a>
+                <a href="/kgr-rebuild/services/index.html" class="hover:text-emerald-600 transition">NBHWC Certification</a>
+                <a href="/kgr-rebuild/collaborative/index.html" class="hover:text-emerald-600 transition">Coaching Collaborative</a>
+                <a href="/kgr-rebuild/communities/index.html" class="hover:text-emerald-600 transition">Explore More</a>
                 <a href="/kgr-rebuild/contact/index.html" class="px-5 py-2.5 bg-slate-900 text-white rounded-full hover:bg-emerald-700 transition">Contact Us</a>
             </div>
-            
-            <button class="lg:hidden p-2 text-slate-600">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
-            </button>
         </nav>
     </header>
 
     <main class="pt-20">
+        <!-- Pass Rate / Announcement -->
+        <div class="bg-emerald-600 text-white py-3 text-center text-sm font-bold tracking-wide">
+            Our pass rate is 100%!
+        </div>
+
+        <!-- Marquee Banner -->
+        <div class="bg-slate-100 py-2 border-b border-slate-200 marquee">
+            <div class="marquee-content font-bold text-emerald-700 text-xs uppercase tracking-widest">
+                Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - Evening Class Now Available - Start Early - 
+            </div>
+        </div>
+
         <!-- Hero -->
-        <section class="relative py-24 lg:py-32 overflow-hidden hero-pattern">
-            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-                <div class="relative z-10 space-y-8">
-                    <div class="inline-flex flex-col space-y-2">
-                        <div class="inline-flex items-center space-x-2 px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-bold uppercase tracking-wider w-fit">
-                            <span>Evening Class Now Available - Start Early -</span>
-                        </div>
-                    </div>
-                    <h1 class="text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.1]">
-                        Welcome to the <br><span class="text-emerald-600">KGR Family!</span>
-                    </h1>
-                    <p class="text-xl text-slate-600 leading-relaxed max-w-lg font-medium">
-                        Check out our video to learn why KGR is the perfect academy for you!
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="/kgr-rebuild/services/index.html" class="px-8 py-4 bg-emerald-600 text-white rounded-2xl font-bold shadow-xl shadow-emerald-200 hover:bg-emerald-700 transition transform hover:-translate-y-1">Our Services</a>
-                        <a href="/kgr-rebuild/about/index.html" class="px-8 py-4 bg-white text-slate-900 border border-slate-200 rounded-2xl font-bold hover:bg-slate-50 transition">About Our Company</a>
-                    </div>
+        <section class="py-24 lg:py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-6 text-center space-y-8">
+                <div class="space-y-4">
+                    <h2 class="text-emerald-600 font-bold uppercase tracking-widest text-sm">Join the KGR Family!</h2>
+                    <h1 class="text-5xl lg:text-7xl font-bold text-slate-900">Welcome to the KGR Family!</h1>
+                    <p class="text-xl text-slate-600 max-w-2xl mx-auto">Check out our video to learn why KGR is the perfect academy for you!</p>
                 </div>
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-emerald-400/20 rounded-[3rem] blur-3xl"></div>
-                    <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/1749591432502-3BIN0UQTTAC1TA6AGAQO/unsplash-image-kJO8GfbTx6w.jpg?format=1500w" 
-                         class="relative rounded-[2.5rem] shadow-2xl w-full h-[600px] object-cover" alt="Hero Image">
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="/kgr-rebuild/contact/index.html" class="px-10 py-4 bg-emerald-600 text-white rounded-2xl font-bold shadow-xl hover:bg-emerald-700 transition transform hover:-translate-y-1">Enroll Now</a>
+                </div>
+                <div class="mt-16 max-w-5xl mx-auto rounded-[3rem] overflow-hidden shadow-2xl border border-slate-100">
+                    <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/1749591432502-3BIN0UQTTAC1TA6AGAQO/unsplash-image-kJO8GfbTx6w.jpg?format=1500w" class="w-full h-[500px] object-cover" alt="Hero">
                 </div>
             </div>
         </section>
 
-        <!-- YouTube Mention -->
-        <section class="py-16 bg-white border-y border-slate-100 text-center">
-            <div class="max-w-4xl mx-auto px-6 space-y-4">
-                <h2 class="text-3xl font-bold text-slate-900 leading-tight">Curious about what sets KGR apart?</h2>
-                <p class="text-lg text-slate-600 font-medium">Head over to our YouTube channel to see our classes in action!</p>
+        <!-- YouTube Callout -->
+        <section class="py-20 bg-slate-50 text-center border-y border-slate-100">
+            <div class="max-w-4xl mx-auto px-6 space-y-6">
+                <h2 class="text-3xl font-bold text-slate-900">Curious about what sets KGR apart?</h2>
+                <p class="text-lg text-slate-600">Head over to our YouTube channel to see our classes in action!</p>
+                <a href="#" class="inline-block px-8 py-3 bg-red-600 text-white rounded-full font-bold hover:bg-red-700 transition shadow-lg">Check us out!</a>
             </div>
         </section>
 
         <!-- Testimonials -->
-        <section class="py-24 bg-slate-50">
+        <section class="py-32 bg-white">
             <div class="max-w-7xl mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-16 text-slate-900">What Our Graduates Are Saying</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-10">
-                    <div class="bg-white p-12 rounded-[2.5rem] shadow-sm space-y-8 border border-slate-100">
-                        <p class="text-xl text-slate-600 leading-relaxed italic">
-                            “Dear all, I want to share the good news that I passed the NBHWC exam and am now board certified! Thank you so much for the wonderful training and support. I’m truly inspired by your passion for coaching and the genuine care you bring to your students”
-                        </p>
-                        <p class="font-bold text-slate-900">— Chunhua W</p>
+                <h2 class="text-4xl font-bold text-center mb-20 text-slate-900">What Our Graduates Are Saying</h2>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="space-y-6 p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100">
+                        <div class="space-y-4">
+                            <p class="text-slate-600 leading-relaxed font-medium">Dear all,</p>
+                            <p class="text-slate-600 leading-relaxed italic">I want to share the good news that I passed the NBHWC exam and am now board certified! Thank you so much for the wonderful training and support. I’m truly inspired by your passion for coaching and the genuine care you bring to your students</p>
+                        </div>
+                        <p class="font-bold text-emerald-700">— Chunhua W</p>
                     </div>
-                    <div class="bg-white p-12 rounded-[2.5rem] shadow-sm space-y-8 border border-slate-100">
-                        <p class="text-xl text-slate-600 leading-relaxed italic">
-                            “KGR Health and Wellness Coaching course exceeded my expectations! The instructors were engaging and knowledgeable, and my classmates were wonderful too. The live Zoom weekly classes were chock full of information, and well-paced. Furthermore, we did three full rounds of practice coaching, which taught us the basics of H&W coaching. Happy to highly recommend this course!!””
-                        </p>
-                        <p class="font-bold text-slate-900">— Janet Casini</p>
+                    <div class="space-y-6 p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100">
+                        <p class="text-slate-600 leading-relaxed italic">“KGR Health and Wellness Coaching course exceeded my expectations! The instructors were engaging and knowledgeable, and my classmates were wonderful too. The live Zoom weekly classes were chock full of information, and well-paced. Furthermore, we did three full rounds of practice coaching, which taught us the basics of H&W coaching. Happy to highly recommend this course!!”</p>
+                        <p class="font-bold text-emerald-700">— Janet Casini</p>
                     </div>
-                    <div class="bg-white p-12 rounded-[2.5rem] shadow-sm space-y-8 border border-slate-100">
-                        <p class="text-xl text-slate-600 leading-relaxed italic">
-                            “KGR is an absolutely fantastic program that prepares you with both the foundational knowledge and essential skills of health coaching. You are able to practice applying heath coaching skills in authentic ways and get feedback that really helps you improve as a coach. They foster a positive learning environment that makes you feel supported and motivated. I cannot say enough about how great my experience was with this program!”
-                        </p>
-                        <p class="font-bold text-slate-900">— Rachel O’Donnell</p>
+                    <div class="space-y-6 p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100">
+                        <p class="text-slate-600 leading-relaxed italic">“KGR is an absolutely fantastic program that prepares you with both the foundational knowledge and essential skills of health coaching. You are able to practice applying heath coaching skills in authentic ways and get feedback that really helps you improve as a coach. They foster a positive learning environment that makes you feel supported and motivated. I cannot say enough about how great my experience was with this program!”</p>
+                        <p class="font-bold text-emerald-700">— Rachel O’Donnell</p>
                     </div>
-                    <div class="bg-white p-12 rounded-[2.5rem] shadow-sm space-y-8 border border-slate-100 text-emerald-900 bg-emerald-50/50">
-                        <p class="text-xl leading-relaxed font-medium">
-                            "At KGR, we are committed to all our students and clients. You are valued here. You matter and your contribution matters. We will learn as much from you as you do from us. So please, speak up, take up space here. You will be treated with respect and dignity and loved for who you are."
-                        </p>
+                    <div class="space-y-6 p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100">
+                        <p class="text-slate-600 leading-relaxed italic">“This course exceeded my expectations. It’s due to the experience, planning, collaboration and guidance of our trio of supercoaches. Thank you for putting your heart and soul into this program and profession. You’ve created an outstanding program, and you are outstanding teachers, mentors and role models. Much, much thanks!”</p>
+                        <p class="font-bold text-emerald-700">— Kathy Y</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Our Company Section -->
-        <section class="py-24 bg-white overflow-hidden">
+        <!-- You Belong Here -->
+        <section class="py-32 bg-slate-900 text-white rounded-[4rem] mx-6 shadow-2xl">
+            <div class="max-w-4xl mx-auto px-10 text-center space-y-8">
+                <h2 class="text-4xl lg:text-5xl font-bold text-emerald-400">You Belong Here</h2>
+                <p class="text-2xl font-light leading-relaxed">
+                    At KGR, we are committed to all our students and clients. You are valued here. You matter and your contribution matters. We will learn as much from you as you do from us. So please, speak up, take up space here. You will be treated with respect and dignity and loved for who you are.
+                </p>
+            </div>
+        </section>
+
+        <!-- About Company -->
+        <section class="py-32 bg-white overflow-hidden">
             <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
-                <div class="relative order-2 lg:order-1">
-                    <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/1749591499555-3QFC1PK8RTOUQM8K6602/unsplash-image-JaoVGh5aJ3E.jpg?format=1000w" 
-                         class="rounded-[3rem] shadow-2xl w-full h-[500px] object-cover" alt="About Our Company">
+                <div class="relative">
+                    <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/1749591499555-3QFC1PK8RTOUQM8K6602/unsplash-image-JaoVGh5aJ3E.jpg?format=1000w" class="rounded-[3rem] shadow-2xl w-full h-[500px] object-cover" alt="Teamwork">
                 </div>
-                <div class="space-y-8 order-1 lg:order-2">
-                    <h2 class="text-4xl font-bold text-slate-900">About our company</h2>
-                    <p class="text-lg text-slate-600 leading-relaxed">
+                <div class="space-y-8">
+                    <div class="space-y-2">
+                        <h2 class="text-xl font-bold text-emerald-600 uppercase tracking-widest">About</h2>
+                        <h3 class="text-4xl lg:text-5xl font-bold text-slate-900">our company</h3>
+                    </div>
+                    <p class="text-lg text-slate-600 leading-relaxed font-medium">
                         KGR is proud to be a female-owned business dedicated to empowering future health coach professionals. We are a NBHWC Approved Training Program who offers national board training for those looking to become NBHWC board certified health coaches. We also collaborate with community colleges to expand access to affordable health coaching education and support. In addition to our academy, KGR delivers a variety of coaching experiences tailored to both individuals and groups. Most importantly, when you join KGR, you become part of a family - because growth happens best when you're having fun!
                     </p>
+                    <a href="/kgr-rebuild/about/index.html" class="inline-block px-8 py-4 border-2 border-slate-900 text-slate-900 rounded-2xl font-bold hover:bg-slate-900 hover:text-white transition">Meet The Team</a>
                 </div>
             </div>
         </section>
 
-        <!-- Our Services Section -->
-        <section class="py-24 bg-slate-900 text-white rounded-[4rem] mx-6">
-            <div class="max-w-7xl mx-auto px-10 grid lg:grid-cols-2 gap-20 items-center">
-                <div class="space-y-10">
-                    <h2 class="text-4xl lg:text-5xl font-bold">Our Services</h2>
+        <!-- Services -->
+        <section class="py-32 bg-slate-50 border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-20 text-center">Our Services</h2>
+                <div class="bg-white p-12 lg:p-20 rounded-[4rem] shadow-xl border border-slate-100 grid lg:grid-cols-2 gap-20 items-center">
                     <div class="space-y-8">
-                        <div class="space-y-4">
-                            <h4 class="text-emerald-400 font-bold text-xl uppercase tracking-widest">Training Program</h4>
-                            <p class="text-slate-300 leading-relaxed text-lg font-light">
-                                Our NBHWC Approved Training Program is designed to equip you with the skills and knowledge needed to become a fully accredited NBC-HWC coach. Our motto is “Learning by Doing” which serves as the foundation of our program design. In addition, upon completion of our certifying course, enrollment includes full access to our comprehensive exam prep review course.
-                            </p>
-                        </div>
-                        <div class="space-y-4 border-t border-slate-800 pt-8">
-                            <h4 class="text-blue-400 font-bold text-xl uppercase tracking-widest">Individual & Group Coaching</h4>
-                            <p class="text-slate-300 leading-relaxed text-lg font-light">
-                                KGR offers both individual and group coaching options for those who are ready to take charge of their wellbeing. For those seeking tailored guidance and focused support, one-on-one coaching offers the personalized approach you need. For those who thrive in a community setting, our Thrive Tribe communities offer a space dedicated to connection, growth, and encouragement.
-                            </p>
-                        </div>
-                        <div class="space-y-4 border-t border-slate-800 pt-8">
-                            <h4 class="text-amber-400 font-bold text-xl uppercase tracking-widest">Corporate Wellness</h4>
-                            <p class="text-slate-300 leading-relaxed text-lg font-light">
-                                Interested in helping your employees get healthier and feel their best? KGR partners with businesses to enhance employee well-being through customized corporate health coaching. Our programs feature topics dedicated to stress management, sleep, nutrition, and exercise—providing practical tools that support lasting wellness.
-                            </p>
-                        </div>
+                        <h3 class="text-3xl font-bold text-slate-900">Our Academy</h3>
+                        <p class="text-lg text-slate-600 leading-relaxed">
+                            Our NBHWC Approved Training Program is designed to equip you with the skills and knowledge needed to become a fully accredited NBC-HWC coach. Our motto is “Learning by Doing” which serves as the foundation of our program design. In addition, upon completion of our certifying course, enrollment includes full access to our comprehensive exam prep review course. We also offer assistance with obtaining your required coaching sessions allowing you to sit for the NBHWC certifying exam.
+                        </p>
+                        <a href="/kgr-rebuild/services/index.html" class="inline-block text-emerald-600 font-bold border-b-2 border-emerald-600 pb-1 hover:text-emerald-700 transition">Learn more here</a>
                     </div>
-                </div>
-                <div class="relative bg-emerald-600/10 p-12 rounded-[3rem] border border-emerald-500/20">
-                    <p class="text-2xl font-light italic leading-relaxed text-emerald-100">
-                        "When employees are healthy, productivity rises and absenteeism drops, creating a win-win for everyone. Healthy employees are the foundation of strong, thriving workplaces!"
-                    </p>
-                    <div class="mt-12">
-                        <a href="/kgr-rebuild/contact/index.html" class="inline-block px-8 py-4 bg-emerald-600 text-white rounded-2xl font-bold hover:bg-emerald-700 transition shadow-xl">Contact us to learn more</a>
+                    <div class="relative">
+                        <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/c7bebe85-c40b-4394-8580-a2d174918eee/hands-1917895_1280.png?format=1000w" class="rounded-[2rem] w-full shadow-lg" alt="Academy">
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Final spacing -->
-        <div class="h-24"></div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800 text-center">
-        <div class="max-w-7xl mx-auto px-6">
-            <p>&copy; 2026 KGR Health and Wellness Academy. All rights reserved.</p>
-        </div>
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800 text-center text-sm">
+        <p>&copy; 2026 KGR Health and Wellness Academy. All rights reserved.</p>
     </footer>
 </body>
 </html>
