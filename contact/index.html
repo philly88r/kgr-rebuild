@@ -26,18 +26,31 @@
 </head>
 <body class="bg-white text-slate-900">
     <!-- Header -->
-    <header class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <header class="fixed top-0 w-full z-50 glass border-b border-white/20 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
             <a href="/kgr-rebuild/index.html" class="flex items-center">
                 <img src="/kgr-rebuild/assets/images/kgrlogo.webp" class="h-24 w-auto" alt="KGR Health and Wellness Academy">
             </a>
-            <div class="hidden lg:flex items-center space-x-10 text-sm font-semibold text-slate-600">
-                <a href="/kgr-rebuild/index.html" class="hover:text-kgr-cyan transition">Home</a>
-                <a href="/kgr-rebuild/about" class="hover:text-kgr-cyan transition">About</a>
-                <a href="/kgr-rebuild/services" class="hover:text-kgr-cyan transition">Services</a>
-                <a href="/kgr-rebuild/communities" class="hover:text-kgr-cyan transition">Communities</a>
-                <a href="/kgr-rebuild/collaborative" class="hover:text-kgr-cyan transition">Collaborative</a>
-                <a href="/kgr-rebuild/contact" class="text-kgr-cyan">Contact Us</a>
+            <div class="hidden lg:flex items-center space-x-1">
+                <a href="/kgr-rebuild/about/index.html" class="nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all">Our Team</a>
+                <a href="/kgr-rebuild/services/index.html" class="nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all">NBHWC Certification</a>
+                <a href="/kgr-rebuild/collaborative/index.html" class="nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all">Coaching Collaborative</a>
+                <div class="relative group">
+                    <button class="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all inline-flex items-center gap-1">
+                        Explore More
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="absolute top-full right-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="bg-white rounded-2xl shadow-xl border border-gray-100 py-2 min-w-[220px]">
+                            <a href="/kgr-rebuild/exam-prep/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">KGR NBHWC Exam Prep</a>
+                            <a href="/kgr-rebuild/services/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">KGR Practice Exam</a>
+                            <a href="/kgr-rebuild/communities/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">Coaching Communities</a>
+                            <a href="/kgr-rebuild/books-and-beyond/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">Books and Beyond</a>
+                            <a href="/kgr-rebuild/contact/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">Free Coaching</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="/kgr-rebuild/contact/index.html" class="ml-4 px-6 py-2.5 btn-primary text-white text-sm font-semibold rounded-full shadow-lg">Contact Us</a>
             </div>
         </nav>
     </header>

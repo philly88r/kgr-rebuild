@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Our Team — KGR Academy</title>
+    <title>Our Team — KGR Academy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,112 +22,197 @@
         }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; }</style>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255,255,255,0.72); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); }
+        .gradient-hero { background: linear-gradient(135deg, #1a237e 0%, #0d47a1 50%, #00e5ff 100%); }
+        .glow-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.3; pointer-events: none; }
+        .btn-primary { background: linear-gradient(135deg, #00e5ff, #00b8d4); }
+        .btn-primary:hover { background: linear-gradient(135deg, #00b8d4, #0097a7); }
+        .card-hover { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+        .section-divider { height: 1px; background: linear-gradient(90deg, transparent, #e2e8f0, transparent); }
+    </style>
 </head>
-<body class="text-black bg-white">
-    <header class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<body class="bg-white text-slate-900 selection:bg-kgr-cyan/20 selection:text-kgr-blue">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass border-b border-white/20 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
             <a href="/kgr-rebuild/index.html" class="flex items-center">
                 <img src="/kgr-rebuild/assets/images/kgrlogo.webp" class="h-24 w-auto" alt="KGR Health and Wellness Academy">
             </a>
-            <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold">
-                <a href="/kgr-rebuild/index.html" class="text-gray-800 hover:text-kgr-cyan transition">Home</a>
-                <a href="/kgr-rebuild/about/index.html" class="text-kgr-cyan font-bold">About</a>
-                <a href="/kgr-rebuild/services/index.html" class="text-gray-800 hover:text-kgr-cyan transition">Services</a>
-                <a href="/kgr-rebuild/communities/index.html" class="text-gray-800 hover:text-kgr-cyan transition">Communities</a>
-                <a href="/kgr-rebuild/collaborative/index.html" class="text-gray-800 hover:text-kgr-cyan transition">Collaborative</a>
-                <a href="/kgr-rebuild/contact/index.html" class="px-5 py-2.5 bg-black text-white rounded-full hover:bg-kgr-cyan transition">Contact Us</a>
+            <div class="hidden lg:flex items-center space-x-1">
+                <a href="/kgr-rebuild/about/index.html" class="nav-link px-4 py-2 text-sm font-semibold text-kgr-blue rounded-lg bg-kgr-cyan/10 transition-all">Our Team</a>
+                <a href="/kgr-rebuild/services/index.html" class="nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all">NBHWC Certification</a>
+                <a href="/kgr-rebuild/collaborative/index.html" class="nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all">Coaching Collaborative</a>
+                <div class="relative group">
+                    <button class="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all inline-flex items-center gap-1">
+                        Explore More
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="absolute top-full right-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="bg-white rounded-2xl shadow-xl border border-gray-100 py-2 min-w-[220px]">
+                            <a href="/kgr-rebuild/exam-prep/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">KGR NBHWC Exam Prep</a>
+                            <a href="/kgr-rebuild/services/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">KGR Practice Exam</a>
+                            <a href="/kgr-rebuild/communities/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">Coaching Communities</a>
+                            <a href="/kgr-rebuild/books-and-beyond/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">Books and Beyond</a>
+                            <a href="/kgr-rebuild/contact/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">Free Coaching</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="/kgr-rebuild/contact/index.html" class="ml-4 px-6 py-2.5 btn-primary text-white text-sm font-semibold rounded-full shadow-lg">Contact Us</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="py-24 bg-gray-50 border-b border-gray-100">
-            <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
-                <h1 class="text-5xl lg:text-6xl font-bold text-black">Who we are</h1>
-                <p class="text-xl text-gray-600 leading-relaxed">At KGR, we are passionate about the health coaching industry and the positive impact it can have on people's lives. We believe that health coaching has the potential to transform the way we approach health and wellness, by providing a personalized, holistic approach that addresses the root causes of health issues.</p>
+        <!-- Hero -->
+        <section class="gradient-hero pt-32 pb-20 relative overflow-hidden">
+            <div class="glow-orb w-96 h-96 bg-kgr-cyan top-10 -left-20"></div>
+            <div class="glow-orb w-72 h-72 bg-blue-400 bottom-0 right-10"></div>
+            <div class="max-w-5xl mx-auto px-6 text-center space-y-8 relative z-10">
+                <h1 class="text-5xl lg:text-7xl font-extrabold text-white">Who We Are</h1>
+                <p class="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">At KGR, we are passionate about the health coaching industry and the positive impact it can have on people's lives. We believe that health coaching has the potential to transform the way we approach health and wellness, by providing a personalized, holistic approach that addresses the root causes of health issues.</p>
             </div>
         </section>
 
-        <section class="py-28 bg-white">
+        <!-- Mission -->
+        <section class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-                <div class="space-y-6">
+                <div class="space-y-8">
                     <p class="text-kgr-cyan font-bold uppercase tracking-widest text-sm">Our Mission</p>
-                    <h2 class="text-4xl lg:text-5xl font-bold text-black leading-tight">Empowering students through transformative educational experiences</h2>
-                    <p class="text-lg text-gray-600 leading-relaxed">KGR aspires to lead in empowering students, serving as a bridge to opportunities, and delivering transformative educational experiences that change lives and fortify the bonds of our shared humanity. Our mission at KGR is to unlock access to premium, inclusive health coaching programs that break down barriers, amplify student achievement, cultivate a workforce skilled in global and multicultural practices, and enhance the well-being and quality of life for individuals everywhere.</p>
+                    <h2 class="text-4xl font-bold text-slate-900 leading-tight">Empowering students through transformative educational experiences</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed">KGR aspires to lead in empowering students, serving as a bridge to opportunities, and delivering transformative educational experiences that change lives and fortify the bonds of our shared humanity. Our mission is to unlock access to premium, inclusive health coaching programs that break down barriers, amplify student achievement, cultivate a workforce skilled in global and multicultural practices, and enhance the well-being and quality of life for individuals everywhere.</p>
                 </div>
-                <div>
-                    <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/1749591499555-3QFC1PK8RTOUQM8K6602/unsplash-image-JaoVGh5aJ3E.jpg?format=1000w" class="rounded-3xl shadow-2xl w-full h-[450px] object-cover" alt="KGR Mission">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-kgr-cyan/10 rounded-[3rem] blur-3xl"></div>
+                    <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/56ac9430-e0fc-4094-8fc9-1fa99962ba53/DSC_6024.jpg?format=1500w" class="rounded-[3rem] shadow-2xl w-full h-[450px] object-cover relative" alt="KGR Team">
                 </div>
             </div>
         </section>
 
-        <section class="py-28 bg-gray-50">
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Founders -->
+        <section class="py-20 bg-slate-50">
             <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-black">Our Founders</h2>
+                <div class="text-center mb-16 space-y-4">
+                    <p class="text-kgr-cyan font-bold uppercase tracking-widest text-sm">Leadership</p>
+                    <h2 class="text-4xl font-bold text-slate-900">Our Founders</h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all group border border-gray-100">
-                        <div class="h-[350px] overflow-hidden">
-                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/10e7a7d0-032a-4cf0-a08b-08b6dd6b75bd/Beth+KGR+Headshot.jpg?format=1000w" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Dr. Beth Knott">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Beth Knott -->
+                    <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100">
+                        <div class="h-80 overflow-hidden">
+                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/10e7a7d0-032a-4cf0-a08b-08b6dd6b75bd/Beth+KGR+Headshot.jpg?format=1000w" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Beth Knott">
                         </div>
                         <div class="p-8 space-y-3">
-                            <h3 class="text-xl font-bold text-black">Beth Knott, Au.D., NBC-HWC</h3>
+                            <h3 class="text-xl font-bold text-slate-900">Beth Knott, Au.D., NBC-HWC</h3>
                             <p class="text-kgr-cyan font-bold text-xs uppercase tracking-widest">Founder, Director of Curriculum and Development</p>
-                            <p class="text-gray-600 text-sm leading-relaxed">Dr. Beth Knott is a National Board Health and Wellness Coach (NBC-HWC). and owner of Beth Knott Health Coaching, LLC. In addition to coaching private clients, Beth coaches at the corporate level and has also provided coaching services for currently enrolled students at Randolph Community College in Asheboro, NC. She serves as an instructor for Randolph Community College's Health and Wellness Coaching Certification Program. In addition to coaching, Beth can be found giving presentations and leading group courses on Active Listening, Mindfulness and Stress Management. Beth holds a doctorate degree in Audiology and served as a pediatric audiologist for 20 years before shifting into health coaching full time. She is highly engaged in her community and serves on a variety of community boards. She is currently fulfilling her second term on the Asheboro City Board of Education. Her motto is: Everyone deserves to feel amazing. One small step at a time!</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">Dr. Beth Knott is a National Board Certified Health and Wellness Coach (NBC-HWC) and owner of Beth Knott Health Coaching, LLC. She coaches private and corporate clients and instructs at Randolph Community College's Health and Wellness Coaching Certification Program. She gives presentations on Active Listening, Mindfulness and Stress Management. Beth holds a doctorate in Audiology and was a pediatric audiologist for 20 years before transitioning to health coaching. She serves on community boards including the Asheboro City Board of Education. Her motto: "Everyone deserves to feel amazing. One small step at a time!"</p>
                         </div>
                     </div>
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all group border border-gray-100">
-                        <div class="h-[350px] overflow-hidden">
-                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/29b65bff-e7bc-416e-9356-26aa75242594/DSC_6056.jpg?format=1000w" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Daffie Garris">
+                    <!-- Daffie Garris -->
+                    <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100">
+                        <div class="h-80 overflow-hidden">
+                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/29b65bff-e7bc-416e-9356-26aa75242594/DSC_6056.jpg?format=1000w" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Daffie Garris">
                         </div>
                         <div class="p-8 space-y-3">
-                            <h3 class="text-xl font-bold text-black">Daffie Garris, NBC-HWC</h3>
+                            <h3 class="text-xl font-bold text-slate-900">Daffie Garris, NBC-HWC</h3>
                             <p class="text-kgr-cyan font-bold text-xs uppercase tracking-widest">Founder, Chief Financial Officer</p>
-                            <p class="text-gray-600 text-sm leading-relaxed">Daffie Garris is a proud partner in KGR Health and Wellness Academy, as well as the Owner of Garris Coaching. Daffie is a National Board Certified Health and Wellness Coach (NBC-HWC). She is also a Certified Human Resource Professional-SHPR and SHRM-SCP. She believes in constantly learning and growing and helps others do the same. She provided executive leadership in higher education for over twenty-seven years for the North Carolina Community College System. Her last role was Chief Financial Officer/Vice President for Administrative Services. However, her higher education career started as a faculty member and Division Chair. Her first love has always been connecting with students through teaching. She loves to combine her business knowledge with teaching by helping those entrepreneurs who are dreaming of owning their own successful coaching business. She believes education is the key to changing lives. When not teaching and coaching, you will find her hiking, kayaking and many other outdoor activities.</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">Daffie Garris is a co-founder of KGR and Owner of Garris Coaching. An NBC-HWC and Certified Human Resource Professional (SHPR and SHRM-SCP), she provided executive leadership in higher education for over 27 years within the NC Community College System, her final role being CFO/VP for Administrative Services. Her career began as faculty and Division Chair. She helps entrepreneurs build coaching businesses and believes education is the key to changing lives. Outside work she enjoys hiking, kayaking, and outdoor activities.</p>
                         </div>
                     </div>
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all group border border-gray-100">
-                        <div class="h-[350px] overflow-hidden">
-                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/f3337109-eb16-47db-aa8e-4589cf9e4519/DSC_6091.jpg?format=1000w" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Rae Ritter">
+                    <!-- Rae Ritter -->
+                    <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100">
+                        <div class="h-80 overflow-hidden">
+                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/f3337109-eb16-47db-aa8e-4589cf9e4519/DSC_6091.jpg?format=1000w" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Rae Ritter">
                         </div>
                         <div class="p-8 space-y-3">
-                            <h3 class="text-xl font-bold text-black">Rae Ritter, NBC-HWC</h3>
+                            <h3 class="text-xl font-bold text-slate-900">Rae Ritter, NBC-HWC</h3>
                             <p class="text-kgr-cyan font-bold text-xs uppercase tracking-widest">Founder, Director of Information and Technology</p>
-                            <p class="text-gray-600 text-sm leading-relaxed">Rae is a National Board Certified Health and Wellness Coach (NBC-HWC) and owner of Live Moore Coaching. In addition to coaching private clients, Rae teaches others to become coaches and spent many years working in nutrition and epidemiology research at the University of North Carolina. Rae's personal healing experience led to a journey through studies of eating habits and related diseases, and ultimately inspired Rae to become a health and wellness coach and teacher. Rae has helped clients reverse disease processes, lose weight, and eliminate toxic substances and relationships by providing each with unconditional positive support as they establish self-directed, lasting changes designed to suit their specific needs. Rae's non-judgmental encouragement creates a respectful space for others to transform into the person they aspire to be.</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">Rae is an NBC-HWC and owner of Live Moore Coaching. Previously worked in nutrition and epidemiology research at UNC. A personal healing journey led her through studies of eating habits and related diseases, inspiring her career in health coaching. Rae has helped clients reverse disease processes, lose weight, and eliminate toxic substances and relationships. She offers unconditional positive support and non-judgmental encouragement to help clients establish lasting, self-directed changes.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-28 bg-white">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
-                <div class="p-10 bg-gray-50 rounded-3xl space-y-3 border border-gray-100">
-                    <h4 class="text-2xl font-bold text-black">Tim</h4>
-                    <p class="text-kgr-cyan font-bold text-xs uppercase tracking-widest">Studio Director</p>
-                    <p class="text-gray-600 leading-relaxed">Tim is the mastermind behind KGR's one of a kind live studio. He can be found behind the cameras producing, recording and editing all live and recorded classes.</p>
+        <!-- Team Grid -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16 space-y-4">
+                    <p class="text-kgr-cyan font-bold uppercase tracking-widest text-sm">The Team</p>
+                    <h2 class="text-4xl font-bold text-slate-900">Meet Our Instructors & Staff</h2>
                 </div>
-                <div class="p-10 bg-gray-50 rounded-3xl space-y-3 border border-gray-100">
-                    <h4 class="text-2xl font-bold text-black">Stephanie Cuthbertson</h4>
-                    <p class="text-kgr-cyan font-bold text-xs uppercase tracking-widest">Lead Instructor & Corporate Coach</p>
-                    <p class="text-gray-600 text-sm leading-relaxed">Stephanie had always been captivated by the intricate dance of life within the human body. With a degree in Biology from Columbia University, she spent years delving into the mysteries of health. This naturally evolved into a passion for health and wellness coaching, leading her to become a National Board Health and Wellness Coach (NBC-HWC). After enrolling in their program, she immersed herself in the coursework, refining her skills. She was invited to become part of their academy and now stand in front of eager minds, watching as students transformed before her eyes.</p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Tim Garris -->
+                    <div class="card-hover bg-slate-50 rounded-3xl p-8 space-y-4 border border-slate-100">
+                        <div class="w-20 h-20 bg-kgr-cyan/10 rounded-2xl flex items-center justify-center">
+                            <span class="text-2xl">🎬</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Tim Garris</h3>
+                        <p class="text-kgr-cyan font-bold text-xs uppercase tracking-widest">Studio Director</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">The mastermind behind KGR's one-of-a-kind live studio. He produces, records, and edits all live and recorded classes behind the cameras.</p>
+                    </div>
+                    <!-- Stephanie Cuthbertson -->
+                    <div class="card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/9b57db75-6238-459e-be36-86d71dbda6e3/Stephanie+C-2.jpg?format=1000w" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Stephanie Cuthbertson">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-lg font-bold text-slate-900">Stephanie Cuthbertson, NBC-HWC</h3>
+                            <p class="text-kgr-cyan font-bold text-xs uppercase tracking-widest">Lead Instructor & Corporate Coach</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">With a Biology degree from Columbia University, Stephanie evolved into a passionate health coach. An NBC-HWC, she enrolled in KGR's program and was invited to become part of the academy. She watches students transform from uncertain to embracing their potential as future health coaches.</p>
+                        </div>
+                    </div>
+                    <!-- Nikki Petty-Miles -->
+                    <div class="card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/da2af02a-8fef-4787-a85f-d30d1642c0d2/headshot_no_text.jpg?format=1000w" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Nikki Petty-Miles">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-lg font-bold text-slate-900">Nikki Petty-Miles, NBC-HWC</h3>
+                            <p class="text-kgr-cyan font-bold text-xs uppercase tracking-widest">Certification Course Instructor</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">NBC-HWC certified and a KGR Certification Course Instructor, Nikki brings expertise and dedication to every class she teaches.</p>
+                        </div>
+                    </div>
+                    <!-- Kathy Yandle -->
+                    <div class="card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/4ec335c3-bc20-4c78-8f58-3545d46d6d94/KGR+Gato.jpg?format=1000w" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Kathy Yandle">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-lg font-bold text-slate-900">Kathy Yandle, NBC-HWC</h3>
+                            <p class="text-kgr-cyan font-bold text-xs uppercase tracking-widest">Certification Course Instructor</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">NBC-HWC certified and a valued member of the KGR instructor team, bringing knowledge and passion to health coaching education.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 bg-black text-white text-center rounded-[2rem] mx-6 mb-20">
-            <div class="max-w-4xl mx-auto px-6 space-y-6">
-                <h2 class="text-4xl font-bold text-green-400">Interested in connecting with KGR?</h2>
-                <p class="text-xl opacity-90">Fill out the information below and we will be in touch shortly. We look forward to hearing from you!</p>
-                <a href="/kgr-rebuild/contact/index.html" class="inline-block px-10 py-4 bg-kgr-cyan text-white rounded-2xl font-bold hover:bg-kgr-blue transition shadow-xl">Get in touch</a>
+        <!-- CTA -->
+        <section class="py-20 bg-gradient-to-br from-kgr-blue to-slate-900 text-white text-center">
+            <div class="max-w-4xl mx-auto px-6 space-y-8">
+                <h2 class="text-4xl lg:text-5xl font-bold">Interested in connecting with KGR?</h2>
+                <p class="text-xl text-white/80">Fill out the information below and we will be in touch shortly. We look forward to hearing from you!</p>
+                <a href="/kgr-rebuild/contact/index.html" class="inline-block px-10 py-5 btn-primary text-white rounded-2xl font-bold shadow-xl hover:shadow-2xl transition">Get in Touch</a>
             </div>
         </section>
     </main>
 
-    <footer class="bg-black text-white py-12 text-center text-sm">
-        <p>&copy; 2026 KGR Health and Wellness Academy. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800 text-center">
+        <div class="max-w-7xl mx-auto px-6 space-y-4">
+            <p>&copy; 2026 KGR Health and Wellness Academy. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.instagram.com/kgrhealthandwellnessacademy/" target="_blank" class="hover:text-kgr-cyan transition">Instagram</a>
+                <a href="https://www.facebook.com/people/KGR-Health-and-Wellness-Academy-LLC/100089257028893/" target="_blank" class="hover:text-kgr-cyan transition">Facebook</a>
+                <a href="https://www.youtube.com/@KGRhealthcoaching" target="_blank" class="hover:text-kgr-cyan transition">YouTube</a>
+                <a href="https://www.tiktok.com/@kgrhealthandwellness" target="_blank" class="hover:text-kgr-cyan transition">TikTok</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

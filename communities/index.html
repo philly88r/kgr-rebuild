@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Communities — KGR Academy</title>
+    <title>Coaching Communities — KGR Academy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,114 +21,242 @@
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Inter', sans-serif; }</style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255,255,255,0.72); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); }
+        .gradient-hero { background: linear-gradient(135deg, #1a237e 0%, #0d47a1 50%, #00e5ff 100%); }
+        .glow-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.3; pointer-events: none; }
+        .btn-primary { background: linear-gradient(135deg, #00e5ff, #00b8d4); }
+        .btn-primary:hover { background: linear-gradient(135deg, #00b8d4, #0097a7); }
+        .card-hover { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+        .section-divider { height: 1px; background: linear-gradient(90deg, transparent, #e2e8f0, transparent); }
+        .service-card { position: relative; overflow: hidden; }
+        .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #00e5ff, #1a237e, #00e5ff); background-size: 200% 100%; animation: shimmer 3s linear infinite; }
+        @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    </style>
 </head>
 <body class="bg-white text-slate-900 selection:bg-kgr-cyan/20 selection:text-kgr-blue">
     <!-- Header -->
-    <header class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <header class="fixed top-0 w-full z-50 glass border-b border-white/20 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
             <a href="/kgr-rebuild/index.html" class="flex items-center">
                 <img src="/kgr-rebuild/assets/images/kgrlogo.webp" class="h-24 w-auto" alt="KGR Health and Wellness Academy">
             </a>
-            <div class="hidden lg:flex items-center space-x-10 text-sm font-semibold text-slate-600">
-                <a href="/kgr-rebuild/index.html" class="hover:text-kgr-cyan transition">Home</a>
-                <a href="/kgr-rebuild/about" class="hover:text-kgr-cyan transition">About</a>
-                <a href="/kgr-rebuild/services" class="hover:text-kgr-cyan transition">Services</a>
-                <a href="/kgr-rebuild/communities" class="text-kgr-cyan">Communities</a>
-                <a href="/kgr-rebuild/collaborative" class="hover:text-kgr-cyan transition">Collaborative</a>
-                <a href="/kgr-rebuild/contact" class="px-5 py-2.5 bg-slate-900 text-white rounded-full hover:bg-kgr-blue transition">Contact Us</a>
+            <div class="hidden lg:flex items-center space-x-1">
+                <a href="/kgr-rebuild/about/index.html" class="nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all">Our Team</a>
+                <a href="/kgr-rebuild/services/index.html" class="nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all">NBHWC Certification</a>
+                <a href="/kgr-rebuild/collaborative/index.html" class="nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all">Coaching Collaborative</a>
+                <div class="relative group">
+                    <button class="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all inline-flex items-center gap-1">
+                        Explore More
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="absolute top-full right-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="bg-white rounded-2xl shadow-xl border border-gray-100 py-2 min-w-[220px]">
+                            <a href="/kgr-rebuild/exam-prep/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">KGR NBHWC Exam Prep</a>
+                            <a href="/kgr-rebuild/services/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">KGR Practice Exam</a>
+                            <a href="/kgr-rebuild/communities/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">Coaching Communities</a>
+                            <a href="/kgr-rebuild/books-and-beyond/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">Books and Beyond</a>
+                            <a href="/kgr-rebuild/contact/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">Free Coaching</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="/kgr-rebuild/contact/index.html" class="ml-4 px-6 py-2.5 btn-primary text-white text-sm font-semibold rounded-full shadow-lg">Contact Us</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- Page Header -->
-        <section class="py-24 bg-kgr-cyan/10 text-center">
-            <div class="max-w-4xl mx-auto px-6 space-y-6">
-                <h1 class="text-5xl lg:text-6xl font-bold text-slate-900">Our Communities</h1>
-                <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                    Thrive Tribe is more than just a wellness group. It's a space dedicated to real conversations and authentic connection.
-                </p>
-                <p class="text-lg font-medium text-kgr-blue italic">“The path to greatness is along with others” — Baltasar Gracion</p>
+        <!-- Hero -->
+        <section class="gradient-hero pt-32 pb-20 relative overflow-hidden">
+            <div class="glow-orb w-96 h-96 bg-kgr-cyan top-10 -left-20"></div>
+            <div class="glow-orb w-72 h-72 bg-blue-400 bottom-0 right-10"></div>
+            <div class="max-w-5xl mx-auto px-6 text-center space-y-8 relative z-10">
+                <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/6c08c1d0-a0f2-4442-8dad-f3a3a20b5d44/KGR+Thrive+Tribe+.png?format=1500w" alt="Thrive Tribe" class="h-16 mx-auto mb-4">
+                <h1 class="text-5xl lg:text-7xl font-extrabold text-white">Coaching Communities</h1>
+                <p class="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">Thrive Tribe is more than just a wellness group. It's a space dedicated to real conversations and authentic connection.</p>
+                <p class="text-lg text-kgr-cyan font-medium italic">"The path to greatness is along with others" — Baltasar Gracian</p>
             </div>
         </section>
 
-        <!-- Communities Grid -->
-        <section class="py-32 bg-white">
-            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- StrongHer Together -->
-                <div class="bg-white rounded-[2.5rem] border border-slate-100 shadow-xl hover:shadow-2xl transition group overflow-hidden flex flex-col h-full">
-                    <div class="h-64 bg-slate-100 relative overflow-hidden shrink-0">
-                        <img src="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1618497259178-6XJGK9GR6YAVBQL5L519/20140301_Trade-151_012-2.jpg?format=1000w" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="StrongHer Together">
-                        <div class="absolute inset-0 bg-kgr-cyan/10 group-hover:bg-transparent transition"></div>
-                        <div class="absolute top-6 left-6 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-[10px] font-bold uppercase tracking-wider text-kgr-blue">8-Week Program</div>
-                    </div>
-                    <div class="p-10 flex flex-col flex-grow space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="text-3xl font-bold text-slate-900 group-hover:text-kgr-cyan transition">StrongHer Together</h3>
-                            <p class="text-kgr-cyan font-bold text-sm uppercase tracking-widest">Women-Only Coaching</p>
-                        </div>
-                        <p class="text-slate-600 leading-relaxed flex-grow">Focus on habit change and improving overall wellbeing. Build your “health home” by nurturing key areas like community, sleep, stress management, and nutrition in a supportive space.</p>
-                        <a href="/kgr-rebuild/contact" class="inline-flex items-center text-kgr-cyan font-bold hover:translate-x-2 transition">Build strength →</a>
-                    </div>
+        <!-- Thrive Tribe Programs -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16 space-y-4">
+                    <p class="text-kgr-cyan font-bold uppercase tracking-widest text-sm">Group Coaching</p>
+                    <h2 class="text-4xl font-bold text-slate-900">Thrive Tribe Programs</h2>
                 </div>
-
-                <!-- Unapologetically YOU -->
-                <div class="bg-white rounded-[2.5rem] border border-slate-100 shadow-xl hover:shadow-2xl transition group overflow-hidden flex flex-col h-full">
-                    <div class="h-64 bg-slate-100 relative overflow-hidden shrink-0">
-                        <img src="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1607694583486-2PQT0LQ193RL7MCB6DX4/20140228_Trade+151_0046.jpg?format=1000w" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Unapologetically YOU">
-                        <div class="absolute inset-0 bg-blue-600/10 group-hover:bg-transparent transition"></div>
-                        <div class="absolute top-6 left-6 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-[10px] font-bold uppercase tracking-wider text-blue-700">Led by Rae</div>
-                    </div>
-                    <div class="p-10 flex flex-col flex-grow space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="text-3xl font-bold text-slate-900 group-hover:text-blue-600 transition">Unapologetically YOU</h3>
-                            <p class="text-blue-600 font-bold text-sm uppercase tracking-widest">LGBTQIA+ Community</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- StrongHer Together -->
+                    <div class="card-hover service-card bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/2ee2ebe5-1161-4118-a2f4-d407edef7339/people-9062676_1280.png?format=1500w" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="StrongHer Together">
+                            <div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-[10px] font-bold uppercase tracking-wider text-kgr-blue">8-Week Program</div>
                         </div>
-                        <p class="text-slate-600 leading-relaxed flex-grow">Meaningful conversations designed to help you create your life in authentic ways while building resilience. Topics include the joys and stressors of being a member of the LGBTQIA+ community.</p>
-                        <a href="/kgr-rebuild/contact" class="inline-flex items-center text-blue-600 font-bold hover:translate-x-2 transition">Join the tribe →</a>
-                    </div>
-                </div>
-
-                <!-- Stress STRONG -->
-                <div class="bg-white rounded-[2.5rem] border border-slate-100 shadow-xl hover:shadow-2xl transition group overflow-hidden flex flex-col h-full">
-                    <div class="h-64 bg-slate-100 relative overflow-hidden shrink-0">
-                        <img src="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1607694644871-IC85FNH781UNZSZEGHDR/Aro+Ha_0428.jpg?format=1000w" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Stress STRONG">
-                        <div class="absolute inset-0 bg-amber-600/10 group-hover:bg-transparent transition"></div>
-                        <div class="absolute top-6 left-6 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-[10px] font-bold uppercase tracking-wider text-amber-700">Master Stress</div>
-                    </div>
-                    <div class="p-10 flex flex-col flex-grow space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="text-3xl font-bold text-slate-900 group-hover:text-amber-600 transition">Stress STRONG</h3>
-                            <p class="text-amber-600 font-bold text-sm uppercase tracking-widest">Resilience Training</p>
+                        <div class="p-8 space-y-4">
+                            <h3 class="text-2xl font-bold text-slate-900">StrongHer Together</h3>
+                            <p class="text-kgr-cyan font-bold text-xs uppercase tracking-widest">Women-Only Coaching</p>
+                            <p class="text-slate-600 leading-relaxed">An 8-week women-only group coaching program centered on habit change and overall wellbeing. Build your "health home" by nurturing community, sleep, stress management, exercise, and nutrition in a supportive space.</p>
+                            <a href="/kgr-rebuild/contact/index.html" class="inline-flex items-center text-kgr-cyan font-bold hover:translate-x-2 transition">Learn More &rarr;</a>
                         </div>
-                        <p class="text-slate-600 leading-relaxed flex-grow">Getting good at stress. Rethink your relationship with stress through practical education, stress mindset reframing, and effective relaxation exercises supported by your community.</p>
-                        <a href="/kgr-rebuild/contact" class="inline-flex items-center text-amber-600 font-bold hover:translate-x-2 transition">Get strong →</a>
+                    </div>
+                    <!-- Unapologetically YOU -->
+                    <div class="card-hover service-card bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100">
+                        <div class="h-56 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-6xl">🏳️‍🌈</span>
+                            </div>
+                            <div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-[10px] font-bold uppercase tracking-wider text-blue-700">Led by Rae</div>
+                        </div>
+                        <div class="p-8 space-y-4">
+                            <h3 class="text-2xl font-bold text-slate-900">Unapologetically YOU</h3>
+                            <p class="text-blue-600 font-bold text-xs uppercase tracking-widest">LGBTQIA+ Community</p>
+                            <p class="text-slate-600 leading-relaxed">An 8-week group coaching program led by Rae for individuals who identify as members of the LGBTQIA+ Community. Meaningful conversations focused on creating an authentic, empowering life while building resilience against judgement.</p>
+                            <a href="/kgr-rebuild/contact/index.html" class="inline-flex items-center text-blue-600 font-bold hover:translate-x-2 transition">Join the Tribe &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Stress STRONG -->
+                    <div class="card-hover service-card bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/6c08c1d0-a0f2-4442-8dad-f3a3a20b5d44/KGR+Thrive+Tribe+.png?format=1500w" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Stress STRONG">
+                            <div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-[10px] font-bold uppercase tracking-wider text-amber-700">8-Week Program</div>
+                        </div>
+                        <div class="p-8 space-y-4">
+                            <h3 class="text-2xl font-bold text-slate-900">Stress STRONG</h3>
+                            <p class="text-amber-600 font-bold text-xs uppercase tracking-widest">Resilience Training</p>
+                            <p class="text-slate-600 leading-relaxed">Getting good at stress. Sessions combine meaningful conversation with practical education, covering stress mindset, reframing stress, and building a personalized toolbox. Each session includes simple, effective relaxation exercises.</p>
+                            <a href="/kgr-rebuild/contact/index.html" class="inline-flex items-center text-amber-600 font-bold hover:translate-x-2 transition">Get Strong &rarr;</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Final CTA -->
-        <section class="py-32 bg-slate-900 text-white rounded-t-[5rem]">
-            <div class="max-w-4xl mx-auto px-6 text-center space-y-12">
-                <div class="space-y-4">
-                    <h2 class="text-4xl lg:text-5xl font-bold leading-tight">Together, we grow stronger, one step at a time.</h2>
-                    <p class="text-slate-400 text-lg">Our communities are inclusive spaces where you are invited to show up just as you are.</p>
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Individual & Corporate Coaching -->
+        <section class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12">
+                <!-- Individual -->
+                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/1750009077974-9O1DDWAL9VS40SAX0OGS/unsplash-image-ZBGgaYrI9ig.jpg?format=1500w" class="w-full h-full object-cover" alt="Individual Coaching">
+                    </div>
+                    <div class="p-8 space-y-4">
+                        <h3 class="text-2xl font-bold text-slate-900">Individual Coaching Sessions</h3>
+                        <p class="text-slate-600 leading-relaxed">One-on-one health coaching providing personal time to focus on goals, habits, and challenges. Expert instructors guide, motivate, and support you in building realistic plans. A supportive, judgment-free space.</p>
+                        <a href="/kgr-rebuild/contact/index.html" class="inline-flex items-center text-kgr-cyan font-bold hover:translate-x-2 transition">Book a Session &rarr;</a>
+                    </div>
                 </div>
-                <a href="/kgr-rebuild/contact" class="inline-block px-10 py-5 bg-kgr-cyan text-white rounded-2xl font-bold shadow-xl hover:bg-kgr-blue transition transform hover:-translate-y-1">Inquire About Cohorts</a>
+                <!-- Corporate -->
+                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/1750011635868-SBSPNJKCUPNR4C5CZ7PU/unsplash-image-JaoVGh5aJ3E.jpg?format=1500w" class="w-full h-full object-cover" alt="Corporate Coaching">
+                    </div>
+                    <div class="p-8 space-y-4">
+                        <h3 class="text-2xl font-bold text-slate-900">Corporate Coaching</h3>
+                        <p class="text-slate-600 leading-relaxed">Healthy employees are the foundation of strong, thriving workplaces. KGR partners with businesses to enhance well-being through customized coaching programs tailored to your workforce.</p>
+                        <a href="/kgr-rebuild/contact/index.html" class="inline-flex items-center text-kgr-cyan font-bold hover:translate-x-2 transition">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Graduates -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16 space-y-4">
+                    <p class="text-kgr-cyan font-bold uppercase tracking-widest text-sm">The Next Chapter</p>
+                    <h2 class="text-4xl font-bold text-slate-900">Our Graduates</h2>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">"Together, ordinary people can achieve extraordinary results." — Becka Schoettle</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Trina Goodwin -->
+                    <div class="card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/5e30b961-9de3-425c-ab2d-17e6f0af2c16/IMG_3818.jpg?format=1000w" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Trina Goodwin">
+                        </div>
+                        <div class="p-8 space-y-3">
+                            <h3 class="text-lg font-bold text-slate-900">Trina Goodwin, NBC-HWC</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">NBC-HWC certified with 10+ years in health and wellness. Specializes in supporting moms of neurodivergent children, helping clients restore energy, reduce brain fog, and rediscover joy and clarity while building resilience.</p>
+                        </div>
+                    </div>
+                    <!-- Ange Dickson Finn -->
+                    <div class="card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/70f4d550-09db-4bd4-9f8c-c4669195c6f1/Headshot+2020+v2.jpg?format=1000w" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Ange Dickson Finn">
+                        </div>
+                        <div class="p-8 space-y-3">
+                            <h3 class="text-lg font-bold text-slate-900">Ange Dickson Finn, NBC-HWC</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Certified Integrative Health and Wellness Coach using a client-centered approach. Employs evidence-based coaching techniques alongside relaxation and focusing tools including Emotional Freedom Techniques (EFT) and mindfulness practices.</p>
+                        </div>
+                    </div>
+                    <!-- Nikki Petty-Miles -->
+                    <div class="card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/c749344a-ecd0-4914-add8-f791114110b1/image0.jpeg?format=1000w" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Nikki Petty-Miles">
+                        </div>
+                        <div class="p-8 space-y-3">
+                            <h3 class="text-lg font-bold text-slate-900">Nikki Petty-Miles, NBC-HWC</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Background in psychology, family preservation services, and domestic violence intervention. Owner of NL Miles Consulting, offering health and wellness coaching and court-approved abuse intervention programs.</p>
+                        </div>
+                    </div>
+                    <!-- Melita Crutcher -->
+                    <div class="card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/f0eba88a-3afb-47d5-a3e0-ded6a8cc61e6/image0+%281%29.jpeg?format=1000w" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Melita Crutcher">
+                        </div>
+                        <div class="p-8 space-y-3">
+                            <h3 class="text-lg font-bold text-slate-900">Melita Crutcher</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Certified Health & Wellness Coach with 15+ years of experience. Specializes in guiding women toward greater balance, energy, and purpose. Led <em>Best Weight On You</em>, a wellness clinic inside a private OBGYN practice for over a decade.</p>
+                        </div>
+                    </div>
+                    <!-- Catherine Seklaoui -->
+                    <div class="card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/ca8f637c-5a4b-4196-91a8-7b92d41e5264/1000020981.jpg?format=1000w" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Catherine Seklaoui">
+                        </div>
+                        <div class="p-8 space-y-3">
+                            <h3 class="text-lg font-bold text-slate-900">Catherine Seklaoui</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">KGR Coaching Program graduate and certified health and wellness coach.</p>
+                        </div>
+                    </div>
+                    <!-- Era Martin -->
+                    <div class="card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/652e5cb9-d165-41e9-9eff-ebda3242607c/2024-09-11_Portrait+-+Copy.JPG?format=1000w" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Era Martin">
+                        </div>
+                        <div class="p-8 space-y-3">
+                            <h3 class="text-lg font-bold text-slate-900">Era Martin</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">NBHWC-approved certified health and wellness coach with lifelong exploration of integrative health. Spent 22 years across Egypt, Saudi Arabia, India, Indonesia, China, Taiwan, and Japan. Author of <em>Rutanda: Return to Your Essence through Meditative Yoga Movement</em>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 bg-gradient-to-br from-kgr-blue to-slate-900 text-white">
+            <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
+                <h2 class="text-4xl lg:text-5xl font-bold leading-tight">Together, we grow stronger, one step at a time.</h2>
+                <p class="text-xl text-white/80">Our communities are inclusive spaces where you are invited to show up just as you are.</p>
+                <a href="/kgr-rebuild/contact/index.html" class="inline-block px-10 py-5 btn-primary text-white rounded-2xl font-bold shadow-xl hover:shadow-2xl transition">Inquire About Cohorts</a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800 text-center">
-        <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-6 space-y-4">
             <p>&copy; 2026 KGR Health and Wellness Academy. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.instagram.com/kgrhealthandwellnessacademy/" target="_blank" class="hover:text-kgr-cyan transition">Instagram</a>
+                <a href="https://www.facebook.com/people/KGR-Health-and-Wellness-Academy-LLC/100089257028893/" target="_blank" class="hover:text-kgr-cyan transition">Facebook</a>
+                <a href="https://www.youtube.com/@KGRhealthcoaching" target="_blank" class="hover:text-kgr-cyan transition">YouTube</a>
+                <a href="https://www.tiktok.com/@kgrhealthandwellness" target="_blank" class="hover:text-kgr-cyan transition">TikTok</a>
+            </div>
         </div>
     </footer>
 </body>
