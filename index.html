@@ -27,31 +27,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', system-ui, sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); }
+        .glass { background: rgba(255,255,255,0.82); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); }
         .marquee { overflow: hidden; white-space: nowrap; }
-        .marquee-content { display: inline-block; animation: marquee 25s linear infinite; }
+        .marquee-content { display: inline-block; animation: marquee 22s linear infinite; }
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .gradient-hero { background: linear-gradient(135deg, #0d1137 0%, #1a237e 40%, #0d47a1 100%); }
+        .gradient-hero { background: linear-gradient(160deg, #0a0e2a 0%, #1a237e 35%, #0d47a1 70%, #0097a7 100%); }
         .gradient-text { background: linear-gradient(135deg, #1a237e, #00e5ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -12px rgba(26,35,126,0.2); }
         .service-card { position: relative; overflow: hidden; }
-        .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #1a237e, #00e5ff); }
+        .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #1a237e, #00e5ff, #1a237e); background-size: 200% 100%; animation: shimmer 3s ease-in-out infinite; }
+        @keyframes shimmer { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
         .btn-primary { background: linear-gradient(135deg, #1a237e, #283593); transition: all 0.3s ease; }
-        .btn-primary:hover { background: linear-gradient(135deg, #00e5ff, #00b8d4); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0, 229, 255, 0.3); }
-        .stat-card { backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); }
-        .fade-in { animation: fadeIn 0.8s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .btn-primary:hover { background: linear-gradient(135deg, #00e5ff, #00b8d4); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,229,255,0.35); }
+        .fade-in { animation: fadeIn 0.7s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
         .testimonial-card { position: relative; }
-        .testimonial-card::before { content: '\201C'; position: absolute; top: -10px; left: 20px; font-size: 80px; color: rgba(0, 229, 255, 0.15); font-family: Georgia, serif; line-height: 1; }
+        .testimonial-card::before { content: '\201C'; position: absolute; top: 12px; left: 20px; font-size: 72px; color: rgba(0,229,255,0.12); font-family: Georgia, serif; line-height: 1; pointer-events: none; }
+        .glow-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.12; pointer-events: none; }
+        .section-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(0,229,255,0.3), transparent); }
     </style>
 </head>
 <body class="bg-white text-gray-900 antialiased">
     <!-- Navigation -->
-    <header class="fixed top-0 w-full z-50 glass border-b border-white/20">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <header class="fixed top-0 w-full z-50 glass border-b border-white/20 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
             <a href="/kgr-rebuild/index.html" class="flex items-center">
-                <img src="/kgr-rebuild/assets/images/kgrlogo.webp" class="h-20 w-auto" alt="KGR Health and Wellness Academy">
+                <img src="/kgr-rebuild/assets/images/kgrlogo.webp" class="h-24 w-auto" alt="KGR Health and Wellness Academy">
             </a>
             <div class="hidden lg:flex items-center space-x-1">
                 <a href="/kgr-rebuild/about/index.html" class="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all">Our Team</a>
@@ -62,82 +64,81 @@
         </nav>
     </header>
 
-    <main class="pt-20">
+    <main class="pt-[72px]">
         <!-- Pass Rate Banner -->
-        <div class="bg-gradient-to-r from-kgr-blue via-kgr-blue to-blue-800 text-white py-3 text-center text-sm font-bold tracking-widest uppercase">
+        <div class="bg-gradient-to-r from-kgr-blue via-blue-800 to-kgr-blue text-white py-2.5 text-center text-xs font-bold tracking-[0.25em] uppercase">
             <span class="inline-flex items-center gap-2">
-                <svg class="w-4 h-4 text-kgr-cyan" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3.5 h-3.5 text-kgr-cyan" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 Our pass rate is 100%!
-                <svg class="w-4 h-4 text-kgr-cyan" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3.5 h-3.5 text-kgr-cyan" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
             </span>
         </div>
 
         <!-- Marquee -->
-        <div class="bg-gray-50 py-2.5 border-b border-gray-100 marquee">
-            <div class="marquee-content font-semibold text-gray-400 text-xs uppercase tracking-[0.2em]">
-                Evening Class Now Available &nbsp;&mdash;&nbsp; Start Early &nbsp;&mdash;&nbsp; Evening Class Now Available &nbsp;&mdash;&nbsp; Start Early &nbsp;&mdash;&nbsp; Evening Class Now Available &nbsp;&mdash;&nbsp; Start Early &nbsp;&mdash;&nbsp; Evening Class Now Available &nbsp;&mdash;&nbsp; Start Early &nbsp;&mdash;&nbsp;
+        <div class="bg-gray-50 py-2 border-b border-gray-100 marquee">
+            <div class="marquee-content font-semibold text-gray-400 text-[11px] uppercase tracking-[0.2em]">
+                Evening Class Now Available &nbsp;&mdash;&nbsp; Start Early &nbsp;&mdash;&nbsp; Evening Class Now Available &nbsp;&mdash;&nbsp; Start Early &nbsp;&mdash;&nbsp; Evening Class Now Available &nbsp;&mdash;&nbsp; Start Early &nbsp;&mdash;&nbsp;
             </div>
         </div>
 
         <!-- Hero -->
         <section class="gradient-hero relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10">
-                <div class="absolute top-20 left-10 w-72 h-72 bg-kgr-cyan rounded-full blur-3xl"></div>
-                <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
-            </div>
-            <div class="relative max-w-6xl mx-auto px-6 py-20 lg:py-28 text-center">
-                <div class="space-y-6 fade-in">
-                    <p class="text-kgr-cyan font-bold uppercase tracking-[0.25em] text-sm">Join the KGR Family!</p>
-                    <h1 class="text-5xl lg:text-7xl font-black text-white leading-tight">Welcome to the<br><span class="text-kgr-cyan">KGR Family!</span></h1>
-                    <p class="text-xl text-blue-100/80 max-w-2xl mx-auto font-light">Check out our video to learn why KGR is the perfect academy for you!</p>
+            <div class="glow-orb w-[500px] h-[500px] bg-kgr-cyan top-[-100px] left-[-100px]"></div>
+            <div class="glow-orb w-[600px] h-[600px] bg-blue-400 bottom-[-150px] right-[-100px]"></div>
+            <div class="glow-orb w-[300px] h-[300px] bg-purple-500 top-[50%] left-[60%]"></div>
+            <div class="relative max-w-6xl mx-auto px-6 py-14 lg:py-20 text-center">
+                <div class="space-y-5 fade-in">
+                    <p class="text-kgr-cyan font-bold uppercase tracking-[0.3em] text-xs">Join the KGR Family!</p>
+                    <h1 class="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.1]">Welcome to the<br><span class="text-kgr-cyan">KGR Family!</span></h1>
+                    <p class="text-lg text-blue-100/70 max-w-xl mx-auto font-light">Check out our video to learn why KGR is the perfect academy for you!</p>
                 </div>
-                <div class="mt-12 max-w-4xl mx-auto aspect-video rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10 fade-in">
+                <div class="mt-8 max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10 fade-in">
                     <iframe class="w-full h-full" src="https://www.youtube.com/embed/geXkv8xmSIs" title="KGR Academy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <div class="mt-10 flex justify-center fade-in">
-                    <a href="/kgr-rebuild/contact/index.html" class="inline-flex items-center gap-3 px-10 py-4 bg-kgr-cyan text-kgr-blue rounded-full font-bold text-lg shadow-xl shadow-kgr-cyan/30 hover:bg-white hover:shadow-kgr-cyan/20 transition-all duration-300 transform hover:-translate-y-1">
+                <div class="mt-8 flex justify-center fade-in">
+                    <a href="/kgr-rebuild/contact/index.html" class="inline-flex items-center gap-2 px-8 py-3.5 bg-kgr-cyan text-kgr-blue rounded-full font-bold shadow-xl shadow-kgr-cyan/30 hover:bg-white hover:shadow-kgr-cyan/20 transition-all duration-300 transform hover:-translate-y-0.5 text-sm">
                         Enroll Now
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- Testimonials -->
-        <section class="py-28 bg-gray-50">
+        <section class="py-20 bg-gray-50">
             <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-16 space-y-3">
-                    <p class="text-kgr-cyan font-bold uppercase tracking-[0.2em] text-sm">Testimonials</p>
-                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900">What Our Graduates<br>Are Saying</h2>
+                <div class="text-center mb-12 space-y-2">
+                    <p class="text-kgr-cyan font-bold uppercase tracking-[0.2em] text-xs">Testimonials</p>
+                    <h2 class="text-3xl lg:text-4xl font-black text-gray-900">What Our Graduates Are Saying</h2>
                 </div>
-                <div class="grid lg:grid-cols-2 gap-8">
-                    <div class="testimonial-card bg-white p-10 rounded-3xl shadow-sm border border-gray-100 card-hover">
-                        <p class="text-gray-600 leading-relaxed font-medium mb-2">Dear all,</p>
-                        <p class="text-gray-600 leading-relaxed italic mb-6">I want to share the good news that I passed the NBHWC exam and am now board certified! Thank you so much for the wonderful training and support. I'm truly inspired by your passion for coaching and the genuine care you bring to your students</p>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-kgr-blue to-kgr-cyan flex items-center justify-center text-white font-bold text-sm">CW</div>
-                            <p class="font-bold text-kgr-blue">Chunhua W</p>
+                <div class="grid lg:grid-cols-2 gap-6">
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover">
+                        <p class="text-gray-600 leading-relaxed font-medium mb-1 relative z-10">Dear all,</p>
+                        <p class="text-gray-600 leading-relaxed italic mb-5 relative z-10">I want to share the good news that I passed the NBHWC exam and am now board certified! Thank you so much for the wonderful training and support. I'm truly inspired by your passion for coaching and the genuine care you bring to your students</p>
+                        <div class="flex items-center gap-3 relative z-10">
+                            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-kgr-blue to-kgr-cyan flex items-center justify-center text-white font-bold text-xs">CW</div>
+                            <p class="font-bold text-kgr-blue text-sm">Chunhua W</p>
                         </div>
                     </div>
-                    <div class="testimonial-card bg-white p-10 rounded-3xl shadow-sm border border-gray-100 card-hover">
-                        <p class="text-gray-600 leading-relaxed italic mb-6">"KGR Health and Wellness Coaching course exceeded my expectations! The instructors were engaging and knowledgeable, and my classmates were wonderful too. The live Zoom weekly classes were chock full of information, and well-paced. Furthermore, we did three full rounds of practice coaching, which taught us the basics of H&W coaching. Happy to highly recommend this course!!"</p>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-kgr-blue to-kgr-cyan flex items-center justify-center text-white font-bold text-sm">JC</div>
-                            <p class="font-bold text-kgr-blue">Janet Casini</p>
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover">
+                        <p class="text-gray-600 leading-relaxed italic mb-5 relative z-10">"KGR Health and Wellness Coaching course exceeded my expectations! The instructors were engaging and knowledgeable, and my classmates were wonderful too. The live Zoom weekly classes were chock full of information, and well-paced. Furthermore, we did three full rounds of practice coaching, which taught us the basics of H&W coaching. Happy to highly recommend this course!!"</p>
+                        <div class="flex items-center gap-3 relative z-10">
+                            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-kgr-blue to-kgr-cyan flex items-center justify-center text-white font-bold text-xs">JC</div>
+                            <p class="font-bold text-kgr-blue text-sm">Janet Casini</p>
                         </div>
                     </div>
-                    <div class="testimonial-card bg-white p-10 rounded-3xl shadow-sm border border-gray-100 card-hover">
-                        <p class="text-gray-600 leading-relaxed italic mb-6">"KGR is an absolutely fantastic program that prepares you with both the foundational knowledge and essential skills of health coaching. You are able to practice applying heath coaching skills in authentic ways and get feedback that really helps you improve as a coach. They foster a positive learning environment that makes you feel supported and motivated. I cannot say enough about how great my experience was with this program!"</p>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-kgr-blue to-kgr-cyan flex items-center justify-center text-white font-bold text-sm">RO</div>
-                            <p class="font-bold text-kgr-blue">Rachel O'Donnell</p>
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover">
+                        <p class="text-gray-600 leading-relaxed italic mb-5 relative z-10">"KGR is an absolutely fantastic program that prepares you with both the foundational knowledge and essential skills of health coaching. You are able to practice applying heath coaching skills in authentic ways and get feedback that really helps you improve as a coach. They foster a positive learning environment that makes you feel supported and motivated. I cannot say enough about how great my experience was with this program!"</p>
+                        <div class="flex items-center gap-3 relative z-10">
+                            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-kgr-blue to-kgr-cyan flex items-center justify-center text-white font-bold text-xs">RO</div>
+                            <p class="font-bold text-kgr-blue text-sm">Rachel O'Donnell</p>
                         </div>
                     </div>
-                    <div class="testimonial-card bg-white p-10 rounded-3xl shadow-sm border border-gray-100 card-hover">
-                        <p class="text-gray-600 leading-relaxed italic mb-6">"This course exceeded my expectations. It's due to the experience, planning, collaboration and guidance of our trio of supercoaches. Thank you for putting your heart and soul into this program and profession. You've created an outstanding program, and you are outstanding teachers, mentors and role models. Much, much thanks!"</p>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-kgr-blue to-kgr-cyan flex items-center justify-center text-white font-bold text-sm">KY</div>
-                            <p class="font-bold text-kgr-blue">Kathy Y</p>
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover">
+                        <p class="text-gray-600 leading-relaxed italic mb-5 relative z-10">"This course exceeded my expectations. It's due to the experience, planning, collaboration and guidance of our trio of supercoaches. Thank you for putting your heart and soul into this program and profession. You've created an outstanding program, and you are outstanding teachers, mentors and role models. Much, much thanks!"</p>
+                        <div class="flex items-center gap-3 relative z-10">
+                            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-kgr-blue to-kgr-cyan flex items-center justify-center text-white font-bold text-xs">KY</div>
+                            <p class="font-bold text-kgr-blue text-sm">Kathy Y</p>
                         </div>
                     </div>
                 </div>
@@ -145,108 +146,114 @@
         </section>
 
         <!-- You Belong Here -->
-        <section class="py-28 bg-kgr-blue relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10">
-                <div class="absolute top-0 right-0 w-96 h-96 bg-kgr-cyan rounded-full blur-3xl"></div>
-                <div class="absolute bottom-0 left-0 w-72 h-72 bg-blue-300 rounded-full blur-3xl"></div>
-            </div>
-            <div class="relative max-w-4xl mx-auto px-10 text-center space-y-8">
-                <h2 class="text-4xl lg:text-5xl font-black text-kgr-cyan">You Belong Here</h2>
-                <p class="text-2xl font-light leading-relaxed text-blue-100/90">
+        <section class="py-20 bg-kgr-blue relative overflow-hidden">
+            <div class="glow-orb w-[400px] h-[400px] bg-kgr-cyan top-[-100px] right-[-100px]"></div>
+            <div class="glow-orb w-[300px] h-[300px] bg-blue-300 bottom-[-80px] left-[-80px]"></div>
+            <div class="relative max-w-3xl mx-auto px-8 text-center space-y-6">
+                <h2 class="text-3xl lg:text-4xl font-black text-kgr-cyan">You Belong Here</h2>
+                <p class="text-xl font-light leading-relaxed text-blue-100/85">
                     At KGR, we are committed to all our students and clients. You are valued here. You matter and your contribution matters. We will learn as much from you as you do from us. So please, speak up, take up space here. You will be treated with respect and dignity and loved for who you are.
                 </p>
             </div>
         </section>
 
         <!-- About Company -->
-        <section class="py-28 bg-white">
-            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
                 <div class="relative">
-                    <div class="absolute -inset-4 bg-gradient-to-br from-kgr-cyan/20 to-kgr-blue/20 rounded-[2.5rem] blur-xl"></div>
-                    <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/1749591499555-3QFC1PK8RTOUQM8K6602/unsplash-image-JaoVGh5aJ3E.jpg?format=1000w" class="relative rounded-3xl shadow-2xl w-full h-[450px] object-cover" alt="Teamwork">
+                    <div class="absolute -inset-3 bg-gradient-to-br from-kgr-cyan/15 to-kgr-blue/15 rounded-3xl blur-xl"></div>
+                    <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/1749591499555-3QFC1PK8RTOUQM8K6602/unsplash-image-JaoVGh5aJ3E.jpg?format=1000w" class="relative rounded-2xl shadow-xl w-full h-[380px] object-cover" alt="Teamwork">
                 </div>
-                <div class="space-y-6">
-                    <div class="space-y-3">
-                        <p class="text-kgr-cyan font-bold uppercase tracking-[0.2em] text-sm">About</p>
-                        <h3 class="text-4xl lg:text-5xl font-black text-gray-900">Our Company</h3>
+                <div class="space-y-5">
+                    <div class="space-y-2">
+                        <p class="text-kgr-cyan font-bold uppercase tracking-[0.2em] text-xs">About</p>
+                        <h3 class="text-3xl lg:text-4xl font-black text-gray-900">Our Company</h3>
                     </div>
-                    <p class="text-lg text-gray-600 leading-relaxed">
+                    <p class="text-gray-600 leading-relaxed">
                         KGR is proud to be a female-owned business dedicated to empowering future health coach professionals. We are a NBHWC Approved Training Program who offers national board training for those looking to become NBHWC board certified health coaches. We also collaborate with community colleges to expand access to affordable health coaching education and support. In addition to our academy, KGR delivers a variety of coaching experiences tailored to both individuals and groups. Most importantly, when you join KGR, you become part of a family - because growth happens best when you're having fun!
                     </p>
-                    <a href="/kgr-rebuild/about/index.html" class="inline-flex items-center gap-2 px-8 py-4 btn-primary text-white rounded-full font-bold shadow-lg">
+                    <a href="/kgr-rebuild/about/index.html" class="inline-flex items-center gap-2 px-7 py-3 btn-primary text-white rounded-full font-bold shadow-lg text-sm">
                         Meet The Team
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
                 </div>
             </div>
         </section>
 
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
         <!-- Services -->
-        <section class="py-28 bg-gray-50 relative">
+        <section class="py-20 bg-gray-50">
             <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-16 space-y-3">
-                    <p class="text-kgr-cyan font-bold uppercase tracking-[0.2em] text-sm">What We Offer</p>
-                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900">Our Services</h2>
-                    <p class="text-lg text-gray-500 max-w-2xl mx-auto mt-4">Comprehensive programs designed to empower individuals, train professionals, and enhance workplace well-being.</p>
+                <div class="text-center mb-12 space-y-2">
+                    <p class="text-kgr-cyan font-bold uppercase tracking-[0.2em] text-xs">What We Offer</p>
+                    <h2 class="text-3xl lg:text-4xl font-black text-gray-900">Our Services</h2>
+                    <p class="text-base text-gray-500 max-w-xl mx-auto mt-2">Comprehensive programs designed to empower individuals, train professionals, and enhance workplace well-being.</p>
                 </div>
 
-                <div class="space-y-8">
+                <div class="space-y-6">
                     <!-- Academy -->
-                    <div class="service-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden card-hover">
-                        <div class="grid lg:grid-cols-2 gap-0">
-                            <div class="p-10 lg:p-14 space-y-6">
-                                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-kgr-blue to-kgr-cyan flex items-center justify-center">
-                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    <div class="service-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
+                        <div class="grid lg:grid-cols-5 gap-0">
+                            <div class="lg:col-span-3 p-8 lg:p-10 space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-kgr-blue to-kgr-cyan flex items-center justify-center shrink-0">
+                                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    </div>
+                                    <h3 class="text-xl font-black text-gray-900">Our Academy</h3>
                                 </div>
-                                <h3 class="text-3xl font-black text-gray-900">Our Academy</h3>
-                                <p class="text-gray-600 leading-relaxed">Our NBHWC Approved Training Program is designed to equip you with the skills and knowledge needed to become a fully accredited NBC-HWC coach. Our motto is "Learning by Doing" which serves as the foundation of our program design. In addition, upon completion of our certifying course, enrollment includes full access to our comprehensive exam prep review course. We also offer assistance with obtaining your required coaching sessions allowing you to sit for the NBHWC certifying exam.</p>
-                                <a href="/kgr-rebuild/services/index.html" class="inline-flex items-center gap-2 text-kgr-blue font-bold hover:text-kgr-cyan transition-colors group">
+                                <p class="text-gray-600 leading-relaxed text-[15px]">Our NBHWC Approved Training Program is designed to equip you with the skills and knowledge needed to become a fully accredited NBC-HWC coach. Our motto is "Learning by Doing" which serves as the foundation of our program design. In addition, upon completion of our certifying course, enrollment includes full access to our comprehensive exam prep review course. We also offer assistance with obtaining your required coaching sessions allowing you to sit for the NBHWC certifying exam.</p>
+                                <a href="/kgr-rebuild/services/index.html" class="inline-flex items-center gap-1.5 text-kgr-blue font-bold hover:text-kgr-cyan transition-colors group text-sm">
                                     Learn more here
-                                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                    <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
                             </div>
-                            <div class="relative">
-                                <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/c7bebe85-c40b-4394-8580-a2d174918eee/hands-1917895_1280.png?format=1000w" class="w-full h-full object-cover min-h-[300px]" alt="Academy">
+                            <div class="lg:col-span-2 relative">
+                                <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/c7bebe85-c40b-4394-8580-a2d174918eee/hands-1917895_1280.png?format=1000w" class="w-full h-full object-cover min-h-[250px]" alt="Academy">
                             </div>
                         </div>
                     </div>
 
                     <!-- Communities -->
-                    <div class="service-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden card-hover">
-                        <div class="grid lg:grid-cols-2 gap-0">
-                            <div class="relative order-2 lg:order-1">
-                                <img src="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1618497259178-6XJGK9GR6YAVBQL5L519/20140301_Trade-151_012-2.jpg?format=1000w" class="w-full h-full object-cover min-h-[300px]" alt="Communities">
+                    <div class="service-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
+                        <div class="grid lg:grid-cols-5 gap-0">
+                            <div class="lg:col-span-2 relative order-2 lg:order-1">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1618497259178-6XJGK9GR6YAVBQL5L519/20140301_Trade-151_012-2.jpg?format=1000w" class="w-full h-full object-cover min-h-[250px]" alt="Communities">
                             </div>
-                            <div class="p-10 lg:p-14 space-y-6 order-1 lg:order-2">
-                                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-kgr-blue to-kgr-cyan flex items-center justify-center">
-                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                            <div class="lg:col-span-3 p-8 lg:p-10 space-y-4 order-1 lg:order-2">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-kgr-blue to-kgr-cyan flex items-center justify-center shrink-0">
+                                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                                    </div>
+                                    <h3 class="text-xl font-black text-gray-900">Coaching Communities</h3>
                                 </div>
-                                <h3 class="text-3xl font-black text-gray-900">Coaching Communities</h3>
-                                <p class="text-gray-600 leading-relaxed">KGR offers both individual and group coaching options for those who are ready to take charge of their wellbeing. For those seeking tailored guidance and focused support, one-on-one coaching offers the personalized approach you need. For those who thrive in a community setting, our Thrive Tribe communities offer a space dedicated to connection, growth, and encouragement. Whether you're looking for one-on-one support or group connections, we're here to support you in whatever way fits best!</p>
-                                <a href="/kgr-rebuild/communities/index.html" class="inline-flex items-center gap-2 text-kgr-blue font-bold hover:text-kgr-cyan transition-colors group">
+                                <p class="text-gray-600 leading-relaxed text-[15px]">KGR offers both individual and group coaching options for those who are ready to take charge of their wellbeing. For those seeking tailored guidance and focused support, one-on-one coaching offers the personalized approach you need. For those who thrive in a community setting, our Thrive Tribe communities offer a space dedicated to connection, growth, and encouragement. Whether you're looking for one-on-one support or group connections, we're here to support you in whatever way fits best!</p>
+                                <a href="/kgr-rebuild/communities/index.html" class="inline-flex items-center gap-1.5 text-kgr-blue font-bold hover:text-kgr-cyan transition-colors group text-sm">
                                     Explore Communities
-                                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                    <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Corporate -->
-                    <div class="service-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden card-hover">
-                        <div class="grid lg:grid-cols-2 gap-0">
-                            <div class="p-10 lg:p-14 space-y-6">
-                                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-kgr-blue to-kgr-cyan flex items-center justify-center">
-                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    <div class="service-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
+                        <div class="grid lg:grid-cols-5 gap-0">
+                            <div class="lg:col-span-3 p-8 lg:p-10 space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-kgr-blue to-kgr-cyan flex items-center justify-center shrink-0">
+                                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                                    </div>
+                                    <h3 class="text-xl font-black text-gray-900">Corporate Coaching</h3>
                                 </div>
-                                <h3 class="text-3xl font-black text-gray-900">Corporate Coaching</h3>
-                                <p class="text-gray-600 leading-relaxed">Interested in helping your employees get healthier and feel their best? KGR partners with businesses to enhance employee well-being through customized corporate health coaching. Our programs feature topics dedicated to stress management, sleep, nutrition, and exercise—providing practical tools that support lasting wellness. When employees are healthy, productivity rises and absenteeism drops, creating a win-win for everyone. Healthy employees are the foundation of strong, thriving workplaces!</p>
-                                <a href="/kgr-rebuild/corporate/index.html" class="inline-flex items-center gap-2 text-kgr-blue font-bold hover:text-kgr-cyan transition-colors group">
+                                <p class="text-gray-600 leading-relaxed text-[15px]">Interested in helping your employees get healthier and feel their best? KGR partners with businesses to enhance employee well-being through customized corporate health coaching. Our programs feature topics dedicated to stress management, sleep, nutrition, and exercise—providing practical tools that support lasting wellness. When employees are healthy, productivity rises and absenteeism drops, creating a win-win for everyone. Healthy employees are the foundation of strong, thriving workplaces!</p>
+                                <a href="/kgr-rebuild/corporate/index.html" class="inline-flex items-center gap-1.5 text-kgr-blue font-bold hover:text-kgr-cyan transition-colors group text-sm">
                                     Corporate Solutions
-                                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                    <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
                             </div>
-                            <div class="relative">
-                                <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/cdec6432-dfe7-4e1d-8151-fbd0c0017c2d/facebook-6549798_1280.jpg?format=1000w" class="w-full h-full object-cover min-h-[300px]" alt="Corporate">
+                            <div class="lg:col-span-2 relative">
+                                <img src="/kgr-rebuild/assets/images/corporate.jpg" class="w-full h-full object-cover min-h-[250px]" alt="Corporate">
                             </div>
                         </div>
                     </div>
@@ -255,35 +262,33 @@
         </section>
 
         <!-- Social / Books -->
-        <section class="py-24 bg-white border-t border-gray-100">
-            <div class="max-w-4xl mx-auto px-6 text-center space-y-12">
-                <div class="space-y-4">
-                    <p class="text-kgr-cyan font-bold uppercase tracking-[0.2em] text-sm">Connect With Us</p>
-                    <h2 class="text-3xl font-black text-gray-900">Follow us on social</h2>
-                    <div class="flex justify-center gap-4 pt-2">
-                        <a href="#" class="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-gray-500 hover:bg-kgr-cyan hover:text-kgr-blue transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-kgr-cyan/20">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.85.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.85-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-5.838 2.435-5.838 5.838s2.435 5.838 5.838 5.838 5.838-2.435 5.838-5.838-2.435-5.838-5.838-5.838zm0 9.513c-2.03 0-3.675-1.645-3.675-3.675s1.645-3.675 3.675-3.675 3.675 1.645 3.675 3.675-1.645 3.675-3.675 3.675zm5.847-10.846c0 .731-.592 1.323-1.323 1.323s-1.323-.592-1.323-1.323.592-1.323 1.323-1.323 1.323.592 1.323 1.323z"/></svg>
+        <section class="py-16 bg-white border-t border-gray-100">
+            <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
+                <div class="space-y-3">
+                    <p class="text-kgr-cyan font-bold uppercase tracking-[0.2em] text-xs">Connect With Us</p>
+                    <h2 class="text-2xl font-black text-gray-900">Follow us on social</h2>
+                    <div class="flex justify-center gap-3 pt-1">
+                        <a href="#" class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center text-gray-400 hover:bg-kgr-cyan hover:text-kgr-blue transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-kgr-cyan/20">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.85.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.85-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-5.838 2.435-5.838 5.838s2.435 5.838 5.838 5.838 5.838-2.435 5.838-5.838-2.435-5.838-5.838-5.838zm0 9.513c-2.03 0-3.675-1.645-3.675-3.675s1.645-3.675 3.675-3.675 3.675 1.645 3.675 3.675-1.645 3.675-3.675 3.675zm5.847-10.846c0 .731-.592 1.323-1.323 1.323s-1.323-.592-1.323-1.323.592-1.323 1.323-1.323 1.323.592 1.323 1.323z"/></svg>
                         </a>
-                        <a href="#" class="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-gray-500 hover:bg-kgr-cyan hover:text-kgr-blue transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-kgr-cyan/20">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-8.74h-2.94v-3.403h2.94v-2.511c0-2.91 1.777-4.495 4.275-4.495 1.197 0 2.226.089 2.526.128v2.93h-1.734c-1.412 0-1.686.671-1.686 1.657v2.171h3.245l-.422 3.403h-2.823v8.74h6.04c.733 0 1.326-.593 1.326-1.324v-21.351c0-.732-.593-1.325-1.326-1.325z"/></svg>
+                        <a href="#" class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center text-gray-400 hover:bg-kgr-cyan hover:text-kgr-blue transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-kgr-cyan/20">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-8.74h-2.94v-3.403h2.94v-2.511c0-2.91 1.777-4.495 4.275-4.495 1.197 0 2.226.089 2.526.128v2.93h-1.734c-1.412 0-1.686.671-1.686 1.657v2.171h3.245l-.422 3.403h-2.823v8.74h6.04c.733 0 1.326-.593 1.326-1.324v-21.351c0-.732-.593-1.325-1.326-1.325z"/></svg>
                         </a>
-                        <a href="#" class="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-gray-500 hover:bg-kgr-cyan hover:text-kgr-blue transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-kgr-cyan/20">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        <a href="#" class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center text-gray-400 hover:bg-kgr-cyan hover:text-kgr-blue transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-kgr-cyan/20">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                         </a>
                     </div>
                 </div>
-                <div class="pt-4">
-                    <a href="/kgr-rebuild/books-and-beyond/index.html" class="inline-flex items-center gap-2 text-lg font-bold text-kgr-blue hover:text-kgr-cyan transition-colors group border-b-2 border-kgr-blue/20 hover:border-kgr-cyan pb-1">
-                        Check out our Recommended Books and Beyond Section
-                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                    </a>
-                </div>
+                <a href="/kgr-rebuild/books-and-beyond/index.html" class="inline-flex items-center gap-1.5 text-base font-bold text-kgr-blue hover:text-kgr-cyan transition-colors group border-b-2 border-kgr-blue/20 hover:border-kgr-cyan pb-0.5">
+                    Check out our Recommended Books and Beyond Section
+                    <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-10 text-center text-sm">
+    <footer class="bg-gray-900 text-gray-500 py-8 text-center text-xs tracking-wide">
         <p>&copy; 2026 KGR Health and Wellness Academy. All rights reserved.</p>
     </footer>
 </body>
