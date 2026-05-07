@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Our Team — KGR Academy</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kgr: {
+                            blue: '#1a237e',
+                            cyan: '#00e5ff',
+                            black: '#1A1A1A',
+                            dark: '#000000',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; }</style>
 </head>
@@ -15,12 +31,12 @@
                 <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/119a0a03-7f72-4734-9721-085e688f2898/KGR+Logo.png?format=1500w" class="h-14 w-auto" alt="KGR Logo">
             </a>
             <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold">
-                <a href="/kgr-rebuild/index.html" class="text-gray-800 hover:text-green-600 transition">Home</a>
-                <a href="/kgr-rebuild/about/index.html" class="text-green-600 font-bold">About</a>
-                <a href="/kgr-rebuild/services/index.html" class="text-gray-800 hover:text-green-600 transition">Services</a>
-                <a href="/kgr-rebuild/communities/index.html" class="text-gray-800 hover:text-green-600 transition">Communities</a>
-                <a href="/kgr-rebuild/collaborative/index.html" class="text-gray-800 hover:text-green-600 transition">Collaborative</a>
-                <a href="/kgr-rebuild/contact/index.html" class="px-5 py-2.5 bg-black text-white rounded-full hover:bg-green-600 transition">Contact Us</a>
+                <a href="/kgr-rebuild/index.html" class="text-gray-800 hover:text-kgr-cyan transition">Home</a>
+                <a href="/kgr-rebuild/about/index.html" class="text-kgr-cyan font-bold">About</a>
+                <a href="/kgr-rebuild/services/index.html" class="text-gray-800 hover:text-kgr-cyan transition">Services</a>
+                <a href="/kgr-rebuild/communities/index.html" class="text-gray-800 hover:text-kgr-cyan transition">Communities</a>
+                <a href="/kgr-rebuild/collaborative/index.html" class="text-gray-800 hover:text-kgr-cyan transition">Collaborative</a>
+                <a href="/kgr-rebuild/contact/index.html" class="px-5 py-2.5 bg-black text-white rounded-full hover:bg-kgr-cyan transition">Contact Us</a>
             </div>
         </nav>
     </header>
@@ -36,7 +52,7 @@
         <section class="py-28 bg-white">
             <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-6">
-                    <p class="text-green-600 font-bold uppercase tracking-widest text-sm">Our Mission</p>
+                    <p class="text-kgr-cyan font-bold uppercase tracking-widest text-sm">Our Mission</p>
                     <h2 class="text-4xl lg:text-5xl font-bold text-black leading-tight">Empowering students through transformative educational experiences</h2>
                     <p class="text-lg text-gray-600 leading-relaxed">KGR aspires to lead in empowering students, serving as a bridge to opportunities, and delivering transformative educational experiences that change lives and fortify the bonds of our shared humanity. Our mission at KGR is to unlock access to premium, inclusive health coaching programs that break down barriers, amplify student achievement, cultivate a workforce skilled in global and multicultural practices, and enhance the well-being and quality of life for individuals everywhere.</p>
                 </div>
@@ -58,7 +74,7 @@
                         </div>
                         <div class="p-8 space-y-3">
                             <h3 class="text-xl font-bold text-black">Beth Knott, Au.D., NBC-HWC</h3>
-                            <p class="text-green-600 font-bold text-xs uppercase tracking-widest">Founder, Director of Curriculum and Development</p>
+                            <p class="text-kgr-cyan font-bold text-xs uppercase tracking-widest">Founder, Director of Curriculum and Development</p>
                             <p class="text-gray-600 text-sm leading-relaxed">Dr. Beth Knott is a National Board Health and Wellness Coach (NBC-HWC). and owner of Beth Knott Health Coaching, LLC. In addition to coaching private clients, Beth coaches at the corporate level and has also provided coaching services for currently enrolled students at Randolph Community College in Asheboro, NC. She serves as an instructor for Randolph Community College's Health and Wellness Coaching Certification Program. In addition to coaching, Beth can be found giving presentations and leading group courses on Active Listening, Mindfulness and Stress Management. Beth holds a doctorate degree in Audiology and served as a pediatric audiologist for 20 years before shifting into health coaching full time. She is highly engaged in her community and serves on a variety of community boards. She is currently fulfilling her second term on the Asheboro City Board of Education. Her motto is: Everyone deserves to feel amazing. One small step at a time!</p>
                         </div>
                     </div>
@@ -68,7 +84,7 @@
                         </div>
                         <div class="p-8 space-y-3">
                             <h3 class="text-xl font-bold text-black">Daffie Garris, NBC-HWC</h3>
-                            <p class="text-green-600 font-bold text-xs uppercase tracking-widest">Founder, Chief Financial Officer</p>
+                            <p class="text-kgr-cyan font-bold text-xs uppercase tracking-widest">Founder, Chief Financial Officer</p>
                             <p class="text-gray-600 text-sm leading-relaxed">Daffie Garris is a proud partner in KGR Health and Wellness Academy, as well as the Owner of Garris Coaching. Daffie is a National Board Certified Health and Wellness Coach (NBC-HWC). She is also a Certified Human Resource Professional-SHPR and SHRM-SCP. She believes in constantly learning and growing and helps others do the same. She provided executive leadership in higher education for over twenty-seven years for the North Carolina Community College System. Her last role was Chief Financial Officer/Vice President for Administrative Services. However, her higher education career started as a faculty member and Division Chair. Her first love has always been connecting with students through teaching. She loves to combine her business knowledge with teaching by helping those entrepreneurs who are dreaming of owning their own successful coaching business. She believes education is the key to changing lives. When not teaching and coaching, you will find her hiking, kayaking and many other outdoor activities.</p>
                         </div>
                     </div>
@@ -78,7 +94,7 @@
                         </div>
                         <div class="p-8 space-y-3">
                             <h3 class="text-xl font-bold text-black">Rae Ritter, NBC-HWC</h3>
-                            <p class="text-green-600 font-bold text-xs uppercase tracking-widest">Founder, Director of Information and Technology</p>
+                            <p class="text-kgr-cyan font-bold text-xs uppercase tracking-widest">Founder, Director of Information and Technology</p>
                             <p class="text-gray-600 text-sm leading-relaxed">Rae is a National Board Certified Health and Wellness Coach (NBC-HWC) and owner of Live Moore Coaching. In addition to coaching private clients, Rae teaches others to become coaches and spent many years working in nutrition and epidemiology research at the University of North Carolina. Rae's personal healing experience led to a journey through studies of eating habits and related diseases, and ultimately inspired Rae to become a health and wellness coach and teacher. Rae has helped clients reverse disease processes, lose weight, and eliminate toxic substances and relationships by providing each with unconditional positive support as they establish self-directed, lasting changes designed to suit their specific needs. Rae's non-judgmental encouragement creates a respectful space for others to transform into the person they aspire to be.</p>
                         </div>
                     </div>
@@ -90,12 +106,12 @@
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
                 <div class="p-10 bg-gray-50 rounded-3xl space-y-3 border border-gray-100">
                     <h4 class="text-2xl font-bold text-black">Tim</h4>
-                    <p class="text-green-600 font-bold text-xs uppercase tracking-widest">Studio Director</p>
+                    <p class="text-kgr-cyan font-bold text-xs uppercase tracking-widest">Studio Director</p>
                     <p class="text-gray-600 leading-relaxed">Tim is the mastermind behind KGR's one of a kind live studio. He can be found behind the cameras producing, recording and editing all live and recorded classes.</p>
                 </div>
                 <div class="p-10 bg-gray-50 rounded-3xl space-y-3 border border-gray-100">
                     <h4 class="text-2xl font-bold text-black">Stephanie Cuthbertson</h4>
-                    <p class="text-green-600 font-bold text-xs uppercase tracking-widest">Lead Instructor & Corporate Coach</p>
+                    <p class="text-kgr-cyan font-bold text-xs uppercase tracking-widest">Lead Instructor & Corporate Coach</p>
                     <p class="text-gray-600 text-sm leading-relaxed">Stephanie had always been captivated by the intricate dance of life within the human body. With a degree in Biology from Columbia University, she spent years delving into the mysteries of health. This naturally evolved into a passion for health and wellness coaching, leading her to become a National Board Health and Wellness Coach (NBC-HWC). After enrolling in their program, she immersed herself in the coursework, refining her skills. She was invited to become part of their academy and now stand in front of eager minds, watching as students transformed before her eyes.</p>
                 </div>
             </div>
@@ -105,7 +121,7 @@
             <div class="max-w-4xl mx-auto px-6 space-y-6">
                 <h2 class="text-4xl font-bold text-green-400">Interested in connecting with KGR?</h2>
                 <p class="text-xl opacity-90">Fill out the information below and we will be in touch shortly. We look forward to hearing from you!</p>
-                <a href="/kgr-rebuild/contact/index.html" class="inline-block px-10 py-4 bg-green-600 text-white rounded-2xl font-bold hover:bg-green-700 transition shadow-xl">Get in touch</a>
+                <a href="/kgr-rebuild/contact/index.html" class="inline-block px-10 py-4 bg-kgr-cyan text-white rounded-2xl font-bold hover:bg-kgr-blue transition shadow-xl">Get in touch</a>
             </div>
         </section>
     </main>

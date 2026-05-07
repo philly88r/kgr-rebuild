@@ -5,35 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services — KGR Academy</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kgr: {
+                            blue: '#1a237e',
+                            cyan: '#00e5ff',
+                            black: '#1A1A1A',
+                            dark: '#000000',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
-<body class="bg-white text-slate-900 selection:bg-emerald-100 selection:text-emerald-900">
+<body class="bg-white text-slate-900 selection:bg-kgr-cyan/20 selection:text-kgr-blue">
     <!-- Header -->
     <header class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="/kgr-rebuild/index.html" class="flex items-center space-x-2 group">
-                <div class="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-bold group-hover:rotate-6 transition">K</div>
+                <div class="w-10 h-10 bg-kgr-cyan rounded-xl flex items-center justify-center text-white font-bold group-hover:rotate-6 transition">K</div>
                 <span class="text-xl font-bold tracking-tight text-slate-900">KGR Academy</span>
             </a>
             <div class="hidden lg:flex items-center space-x-10 text-sm font-semibold text-slate-600">
-                <a href="/kgr-rebuild/index.html" class="hover:text-emerald-600 transition">Home</a>
-                <a href="/kgr-rebuild/about" class="hover:text-emerald-600 transition">About</a>
-                <a href="/kgr-rebuild/services" class="text-emerald-600">Services</a>
-                <a href="/kgr-rebuild/communities" class="hover:text-emerald-600 transition">Communities</a>
-                <a href="/kgr-rebuild/collaborative" class="hover:text-emerald-600 transition">Collaborative</a>
-                <a href="/kgr-rebuild/contact" class="px-5 py-2.5 bg-slate-900 text-white rounded-full hover:bg-emerald-700 transition">Contact Us</a>
+                <a href="/kgr-rebuild/index.html" class="hover:text-kgr-cyan transition">Home</a>
+                <a href="/kgr-rebuild/about" class="hover:text-kgr-cyan transition">About</a>
+                <a href="/kgr-rebuild/services" class="text-kgr-cyan">Services</a>
+                <a href="/kgr-rebuild/communities" class="hover:text-kgr-cyan transition">Communities</a>
+                <a href="/kgr-rebuild/collaborative" class="hover:text-kgr-cyan transition">Collaborative</a>
+                <a href="/kgr-rebuild/contact" class="px-5 py-2.5 bg-slate-900 text-white rounded-full hover:bg-kgr-blue transition">Contact Us</a>
             </div>
         </nav>
     </header>
 
     <main>
         <!-- Page Header -->
-        <section class="py-24 bg-emerald-600 text-white overflow-hidden relative">
-            <div class="absolute inset-0 bg-emerald-700/50 mix-blend-multiply"></div>
+        <section class="py-24 bg-kgr-cyan text-white overflow-hidden relative">
+            <div class="absolute inset-0 bg-kgr-blue/50 mix-blend-multiply"></div>
             <div class="max-w-5xl mx-auto px-6 text-center space-y-6 relative z-10">
                 <h1 class="text-5xl lg:text-7xl font-bold">Our Services</h1>
-                <p class="text-xl text-emerald-50 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-xl text-kgr-cyan/10 max-w-3xl mx-auto leading-relaxed">
                     Comprehensive programs designed to empower individuals, train professionals, and enhance workplace well-being.
                 </p>
             </div>
@@ -45,22 +61,22 @@
                 <!-- Training -->
                 <div class="grid lg:grid-cols-2 gap-20 items-center">
                     <div class="space-y-8">
-                        <div class="inline-flex items-center space-x-2 px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-bold uppercase tracking-widest border border-emerald-100">Professional Training</div>
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 bg-kgr-cyan/10 text-kgr-blue rounded-full text-xs font-bold uppercase tracking-widest border border-kgr-cyan/20">Professional Training</div>
                         <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">NBHWC Approved Training Program</h2>
                         <p class="text-lg text-slate-600 leading-relaxed">
                             Our certifying course is designed to equip you with the skills and knowledge needed to become a fully accredited NBC-HWC coach. Our motto is “Learning by Doing” which serves as the foundation of our program design.
                         </p>
                         <div class="grid sm:grid-cols-2 gap-6">
-                            <div class="p-6 bg-slate-50 rounded-2xl border-l-4 border-emerald-500">
+                            <div class="p-6 bg-slate-50 rounded-2xl border-l-4 border-kgr-cyan/100">
                                 <h4 class="font-bold mb-2">Exam Prep</h4>
                                 <p class="text-sm text-slate-600">Full access to our comprehensive exam prep review course included with enrollment.</p>
                             </div>
-                            <div class="p-6 bg-slate-50 rounded-2xl border-l-4 border-emerald-500">
+                            <div class="p-6 bg-slate-50 rounded-2xl border-l-4 border-kgr-cyan/100">
                                 <h4 class="font-bold mb-2">Session Support</h4>
                                 <p class="text-sm text-slate-600">Assistance with obtaining your required 50 coaching sessions to sit for the exam.</p>
                             </div>
                         </div>
-                        <a href="/kgr-rebuild/contact" class="inline-block px-8 py-4 bg-emerald-600 text-white rounded-2xl font-bold hover:bg-emerald-700 transition">Enroll Now</a>
+                        <a href="/kgr-rebuild/contact" class="inline-block px-8 py-4 bg-kgr-cyan text-white rounded-2xl font-bold hover:bg-kgr-blue transition">Enroll Now</a>
                     </div>
                     <div class="relative">
                         <img src="https://images.squarespace-cdn.com/content/v1/68484c2387a0944aab45a0d2/c7bebe85-c40b-4394-8580-a2d174918eee/hands-1917895_1280.png?format=1500w" 
@@ -96,15 +112,15 @@
                         </p>
                         <ul class="space-y-4">
                             <li class="flex items-center space-x-4">
-                                <div class="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center text-white text-xs">✓</div>
+                                <div class="w-6 h-6 bg-kgr-cyan/100 rounded-full flex items-center justify-center text-white text-xs">✓</div>
                                 <span class="font-medium text-slate-700 text-lg">Collaborative Partnership</span>
                             </li>
                             <li class="flex items-center space-x-4">
-                                <div class="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center text-white text-xs">✓</div>
+                                <div class="w-6 h-6 bg-kgr-cyan/100 rounded-full flex items-center justify-center text-white text-xs">✓</div>
                                 <span class="font-medium text-slate-700 text-lg">Holistic Care (Mind & Body)</span>
                             </li>
                             <li class="flex items-center space-x-4">
-                                <div class="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center text-white text-xs">✓</div>
+                                <div class="w-6 h-6 bg-kgr-cyan/100 rounded-full flex items-center justify-center text-white text-xs">✓</div>
                                 <span class="font-medium text-slate-700 text-lg">Personalized Action Steps</span>
                             </li>
                         </ul>
@@ -121,18 +137,18 @@
                         </p>
                         <div class="space-y-6">
                             <div class="flex items-start space-x-6">
-                                <div class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-emerald-600 shrink-0">1</div>
+                                <div class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-kgr-cyan shrink-0">1</div>
                                 <p class="text-slate-600 font-medium">Customized wellness strategies for your specific workforce needs.</p>
                             </div>
                             <div class="flex items-start space-x-6">
-                                <div class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-emerald-600 shrink-0">2</div>
+                                <div class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-kgr-cyan shrink-0">2</div>
                                 <p class="text-slate-600 font-medium">Topics include stress management, sleep, nutrition, and work-life balance.</p>
                             </div>
                         </div>
-                        <a href="/kgr-rebuild/corporate" class="inline-block text-slate-900 font-bold border-b-2 border-slate-900 pb-1 hover:text-emerald-600 hover:border-emerald-600 transition">Learn about corporate plans</a>
+                        <a href="/kgr-rebuild/corporate" class="inline-block text-slate-900 font-bold border-b-2 border-slate-900 pb-1 hover:text-kgr-cyan hover:border-kgr-cyan transition">Learn about corporate plans</a>
                     </div>
                     <div class="grid grid-cols-2 gap-6">
-                        <div class="aspect-square bg-emerald-600 rounded-3xl p-8 flex flex-col justify-between text-white transform rotate-3">
+                        <div class="aspect-square bg-kgr-cyan rounded-3xl p-8 flex flex-col justify-between text-white transform rotate-3">
                             <span class="text-4xl font-bold leading-none">Rise</span>
                             <span class="text-lg font-medium opacity-80 uppercase tracking-widest text-sm">Productivity</span>
                         </div>

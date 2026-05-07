@@ -5,24 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DEIAJ Commitment — KGR Academy</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kgr: {
+                            blue: '#1a237e',
+                            cyan: '#00e5ff',
+                            black: '#1A1A1A',
+                            dark: '#000000',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
-<body class="bg-white text-slate-900 selection:bg-emerald-100 selection:text-emerald-900">
+<body class="bg-white text-slate-900 selection:bg-kgr-cyan/20 selection:text-kgr-blue">
     <!-- Header -->
     <header class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="/kgr-rebuild/index.html" class="flex items-center space-x-2 group">
-                <div class="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-bold group-hover:rotate-6 transition">K</div>
+                <div class="w-10 h-10 bg-kgr-cyan rounded-xl flex items-center justify-center text-white font-bold group-hover:rotate-6 transition">K</div>
                 <span class="text-xl font-bold tracking-tight text-slate-900">KGR Academy</span>
             </a>
             <div class="hidden lg:flex items-center space-x-10 text-sm font-semibold text-slate-600">
-                <a href="/kgr-rebuild/index.html" class="hover:text-emerald-600 transition">Home</a>
-                <a href="/kgr-rebuild/about" class="hover:text-emerald-600 transition">About</a>
-                <a href="/kgr-rebuild/services" class="hover:text-emerald-600 transition">Services</a>
-                <a href="/kgr-rebuild/communities" class="hover:text-emerald-600 transition">Communities</a>
-                <a href="/kgr-rebuild/collaborative" class="hover:text-emerald-600 transition">Collaborative</a>
-                <a href="/kgr-rebuild/contact" class="px-5 py-2.5 bg-slate-900 text-white rounded-full hover:bg-emerald-700 transition">Contact Us</a>
+                <a href="/kgr-rebuild/index.html" class="hover:text-kgr-cyan transition">Home</a>
+                <a href="/kgr-rebuild/about" class="hover:text-kgr-cyan transition">About</a>
+                <a href="/kgr-rebuild/services" class="hover:text-kgr-cyan transition">Services</a>
+                <a href="/kgr-rebuild/communities" class="hover:text-kgr-cyan transition">Communities</a>
+                <a href="/kgr-rebuild/collaborative" class="hover:text-kgr-cyan transition">Collaborative</a>
+                <a href="/kgr-rebuild/contact" class="px-5 py-2.5 bg-slate-900 text-white rounded-full hover:bg-kgr-blue transition">Contact Us</a>
             </div>
         </nav>
     </header>
@@ -31,7 +47,7 @@
         <article class="max-w-3xl mx-auto px-6 space-y-16">
             <div class="space-y-6 text-center">
                 <h1 class="text-6xl font-bold text-slate-900 tracking-tight leading-none">You Belong.</h1>
-                <p class="text-emerald-600 font-bold uppercase tracking-widest text-xs">Diversity, Equity, Inclusion, Accessibility, and Justice</p>
+                <p class="text-kgr-cyan font-bold uppercase tracking-widest text-xs">Diversity, Equity, Inclusion, Accessibility, and Justice</p>
             </div>
 
             <div class="space-y-8 text-xl text-slate-600 leading-relaxed font-light">
@@ -47,20 +63,20 @@
             </div>
 
             <blockquote class="relative p-12 bg-slate-50 rounded-[3rem] border border-slate-100 overflow-hidden group">
-                <div class="absolute -top-6 -left-2 text-[10rem] text-emerald-100 font-serif opacity-50 select-none group-hover:scale-110 transition duration-700">“</div>
+                <div class="absolute -top-6 -left-2 text-[10rem] text-kgr-cyan/20 font-serif opacity-50 select-none group-hover:scale-110 transition duration-700">“</div>
                 <div class="relative z-10 space-y-8">
                     <p class="text-2xl text-slate-700 leading-relaxed italic">
                         A single action, no matter how bold, won’t change the collective nature of racism, homophobia, transphobia, sexism, or ablism. But everyday actions are not insignificant. They matter because life isn’t lived at the collective level. It’s lived at the individual level, where every day actions make the difference between inclusion or exclusion, joy or pain, opportunity or disadvantage.
                     </p>
                     <footer class="flex items-center space-x-4">
-                        <div class="w-10 h-1 bg-emerald-500"></div>
+                        <div class="w-10 h-1 bg-kgr-cyan/100"></div>
                         <cite class="not-italic font-bold text-slate-900">Suzy Levy, <span class="font-medium text-slate-500">Mind the Inclusion Gap</span></cite>
                     </footer>
                 </div>
             </blockquote>
 
             <div class="pt-12 text-center">
-                <a href="/kgr-rebuild/index.html" class="text-emerald-600 font-bold hover:underline underline-offset-8 transition">← Return Home</a>
+                <a href="/kgr-rebuild/index.html" class="text-kgr-cyan font-bold hover:underline underline-offset-8 transition">← Return Home</a>
             </div>
         </article>
     </main>
