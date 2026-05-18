@@ -1,0 +1,10 @@
+[[redirects]]
+from = "/kgr-rebuild/*"
+to = "/:splat"
+status = 301
+
+[[redirects]]
+from = "/nbhwc-health-coaching-school"
+to = "/nbhwc-health-coaching-school/"
+status = 301
+

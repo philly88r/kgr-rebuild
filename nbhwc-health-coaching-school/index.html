@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBHWC Health Coaching School | KGR Health and Wellness Academy</title>
+    <meta name="description" content="Explore KGR Health and Wellness Academy's NBHWC Approved Training Program for future National Board Certified Health and Wellness Coaches.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kgr: {
+                            blue: '#1a237e',
+                            cyan: '#00e5ff',
+                            ink: '#101828'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .hero-bg { background: radial-gradient(circle at 10% 10%, rgba(0,229,255,.28), transparent 32%), linear-gradient(135deg, #0f172a 0%, #1a237e 54%, #075985 100%); }
+        .btn-primary { background: linear-gradient(135deg, #00e5ff, #0ea5e9); }
+        .btn-primary:hover { background: linear-gradient(135deg, #38bdf8, #1a237e); }
+        .field { width: 100%; border-radius: 1rem; border: 1px solid #dbeafe; background: #f8fafc; padding: .95rem 1rem; outline: none; transition: border-color .2s, box-shadow .2s, background .2s; }
+        .field:focus { background: #fff; border-color: #00e5ff; box-shadow: 0 0 0 4px rgba(0,229,255,.18); }
+    </style>
+</head>
+<body class="bg-white text-slate-900">
+    <header class="bg-white/95 backdrop-blur border-b border-slate-100 sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="/" class="flex items-center">
+                <img src="/assets/images/kgrlogo.webp" alt="KGR Health and Wellness Academy" class="h-20 w-auto">
+            </a>
+            <div class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-700">
+                <a href="/services/" class="hover:text-kgr-blue">Program Details</a>
+                <a href="/about/" class="hover:text-kgr-blue">Instructors</a>
+                <a href="#lead-form" class="px-5 py-3 rounded-full btn-primary text-white shadow-lg shadow-cyan-500/20">Request Info</a>
+            </div>
+            <a href="#lead-form" class="md:hidden px-4 py-2 rounded-full btn-primary text-white text-sm font-bold">Request Info</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-bg text-white">
+            <div class="max-w-7xl mx-auto px-6 py-16 lg:py-24 grid lg:grid-cols-[1.05fr_.95fr] gap-12 items-center">
+                <div class="space-y-7">
+                    <p class="inline-flex items-center rounded-full bg-white/10 border border-white/15 px-4 py-2 text-xs font-bold uppercase tracking-[.2em] text-cyan-100">NBHWC Approved Training Program</p>
+                    <div class="space-y-5">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">NBHWC health coaching school for future board certified coaches.</h1>
+                        <p class="text-lg lg:text-xl text-blue-50/85 leading-relaxed max-w-2xl">KGR Health and Wellness Academy helps students complete the coach training needed to pursue the National Board Certified Health and Wellness Coach credential.</p>
+                    </div>
+                    <div class="grid sm:grid-cols-3 gap-4 max-w-3xl">
+                        <div class="rounded-2xl bg-white/10 border border-white/15 p-5">
+                            <p class="text-3xl font-black text-kgr-cyan">16</p>
+                            <p class="text-sm text-blue-50/80 mt-1">week certification program</p>
+                        </div>
+                        <div class="rounded-2xl bg-white/10 border border-white/15 p-5">
+                            <p class="text-3xl font-black text-kgr-cyan">100%</p>
+                            <p class="text-sm text-blue-50/80 mt-1">reported board exam pass rate</p>
+                        </div>
+                        <div class="rounded-2xl bg-white/10 border border-white/15 p-5">
+                            <p class="text-3xl font-black text-kgr-cyan">17</p>
+                            <p class="text-sm text-blue-50/80 mt-1">live coaching sessions</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#lead-form" class="px-8 py-4 rounded-2xl btn-primary text-white text-center font-black shadow-xl shadow-cyan-500/20">Request Enrollment Info</a>
+                        <a href="https://kgr-health-and-wellness-academy.teachable.com/p/home" class="px-8 py-4 rounded-2xl bg-white text-kgr-blue text-center font-black hover:bg-blue-50 transition">Go to Enrollment Page</a>
+                    </div>
+                </div>
+
+                <div id="lead-form" class="bg-white text-slate-900 rounded-[2rem] p-6 sm:p-8 shadow-2xl">
+                    <div class="mb-6">
+                        <p class="text-sm font-bold text-kgr-blue uppercase tracking-[.18em]">Get the details</p>
+                        <h2 class="text-2xl sm:text-3xl font-black mt-2">Request NBHWC program info</h2>
+                        <p class="text-slate-600 mt-2">Ask about class dates, tuition, payment plans, and whether KGR is the right fit.</p>
+                    </div>
+                    <form name="nbhwc-lead" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
+                        <input type="hidden" name="form-name" value="nbhwc-lead">
+                        <p class="hidden"><label>Do not fill this out: <input name="bot-field"></label></p>
+                        <input type="hidden" name="lead_source" value="NBHWC landing page">
+                        <input type="hidden" name="gclid">
+                        <input type="hidden" name="utm_source">
+                        <input type="hidden" name="utm_medium">
+                        <input type="hidden" name="utm_campaign">
+                        <input type="hidden" name="utm_term">
+                        <input type="hidden" name="utm_content">
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <label class="block text-sm font-bold text-slate-700">First name
+                                <input class="field mt-2" type="text" name="first_name" autocomplete="given-name" required>
+                            </label>
+                            <label class="block text-sm font-bold text-slate-700">Last name
+                                <input class="field mt-2" type="text" name="last_name" autocomplete="family-name">
+                            </label>
+                        </div>
+                        <label class="block text-sm font-bold text-slate-700">Email
+                            <input class="field mt-2" type="email" name="email" autocomplete="email" required>
+                        </label>
+                        <label class="block text-sm font-bold text-slate-700">Phone
+                            <input class="field mt-2" type="tel" name="phone" autocomplete="tel">
+                        </label>
+                        <label class="block text-sm font-bold text-slate-700">Where are you in the process?
+                            <select class="field mt-2" name="timeline">
+                                <option>I am comparing NBHWC schools now</option>
+                                <option>I want to enroll soon</option>
+                                <option>I need class dates and tuition first</option>
+                                <option>I am asking for someone else</option>
+                            </select>
+                        </label>
+                        <button type="submit" class="w-full rounded-2xl btn-primary text-white py-4 font-black shadow-lg shadow-cyan-500/20">Send Me Program Info</button>
+                        <p class="text-xs text-slate-500 leading-relaxed">By submitting, you are asking KGR to follow up about its health coach training program. No spam, just the enrollment details.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1">
+                    <p class="text-kgr-blue font-bold uppercase tracking-[.18em] text-xs">Why students choose KGR</p>
+                    <h2 class="text-3xl lg:text-4xl font-black mt-3">Built for students who already know they need an NBHWC path.</h2>
+                </div>
+                <div class="lg:col-span-2 grid sm:grid-cols-2 gap-5">
+                    <div class="rounded-2xl border border-slate-100 p-6 shadow-sm">
+                        <h3 class="font-black text-lg">NBHWC approved training</h3>
+                        <p class="text-slate-600 mt-2 leading-relaxed">Graduates complete an approved training pathway for the national board certification exam.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-100 p-6 shadow-sm">
+                        <h3 class="font-black text-lg">Live, supported classes</h3>
+                        <p class="text-slate-600 mt-2 leading-relaxed">KGR emphasizes live instruction, real coaching practice, and direct feedback from experienced instructors.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-100 p-6 shadow-sm">
+                        <h3 class="font-black text-lg">Practical coaching reps</h3>
+                        <p class="text-slate-600 mt-2 leading-relaxed">Students practice coaching throughout the program instead of learning only through lectures.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-100 p-6 shadow-sm">
+                        <h3 class="font-black text-lg">Payment plan available</h3>
+                        <p class="text-slate-600 mt-2 leading-relaxed">The program lists tuition at $2,697 and offers no-fee, no-interest payment plan options.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-slate-50">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <h2 class="text-3xl lg:text-4xl font-black">Want the fastest answer?</h2>
+                <p class="text-slate-600 mt-3 text-lg">Send the form and ask for class dates, tuition, payment plan details, or the direct enrollment link.</p>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#lead-form" class="px-8 py-4 rounded-2xl btn-primary text-white font-black">Request Info</a>
+                    <a href="tel:+13364227843" class="px-8 py-4 rounded-2xl bg-white border border-slate-200 text-kgr-blue font-black">Call (336) 422-7843</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-950 text-slate-300 py-10 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <p>&copy; 2026 KGR Health and Wellness Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const tracked = ['gclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+            tracked.forEach(function(key) {
+                const incoming = params.get(key);
+                if (incoming) localStorage.setItem('kgr_' + key, incoming);
+                document.querySelectorAll('input[name="' + key + '"]').forEach(function(input) {
+                    input.value = incoming || localStorage.getItem('kgr_' + key) || '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

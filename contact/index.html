@@ -22,19 +22,24 @@
         }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Inter', sans-serif; }</style>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255,255,255,0.82); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); }
+        .btn-primary { background: linear-gradient(135deg, #1a237e, #283593); transition: all 0.3s ease; }
+        .btn-primary:hover { background: linear-gradient(135deg, #00e5ff, #00b8d4); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,229,255,0.35); }
+    </style>
 </head>
 <body class="bg-white text-slate-900">
     <!-- Header -->
         <header class="fixed top-0 w-full z-50 glass border-b border-white/20 shadow-sm">
         <nav class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
-            <a href="/kgr-rebuild/index.html" class="flex items-center">
-                <img src="/kgr-rebuild/assets/images/kgrlogo.webp" class="h-24 w-auto" alt="KGR Health and Wellness Academy">
+            <a href="/index.html" class="flex items-center">
+                <img src="/assets/images/kgrlogo.webp" class="h-24 w-auto" alt="KGR Health and Wellness Academy">
             </a>
             <div class="hidden lg:flex items-center space-x-1">
-                <a href="/kgr-rebuild/about/index.html" class="nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all">Our Team</a>
-                <a href="/kgr-rebuild/services/index.html" class="nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all">NBHWC Certification</a>
-                <a href="/kgr-rebuild/collaborative/index.html" class="nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all">Coaching Collaborative</a>
+                <a href="/about/index.html" class="nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all">Our Team</a>
+                <a href="/services/index.html" class="nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all">NBHWC Certification</a>
+                <a href="/collaborative/index.html" class="nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all">Coaching Collaborative</a>
                 <div class="relative group">
                     <button class="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-kgr-blue rounded-lg hover:bg-kgr-blue/5 transition-all inline-flex items-center gap-1">
                         Explore More
@@ -42,15 +47,15 @@
                     </button>
                     <div class="absolute top-full right-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                         <div class="bg-white rounded-2xl shadow-xl border border-gray-100 py-2 min-w-[220px]">
-                            <a href="/kgr-rebuild/exam-prep/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">KGR NBHWC Exam Prep</a>
-                            <a href="/kgr-rebuild/services/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">KGR Practice Exam</a>
-                            <a href="/kgr-rebuild/communities/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">Coaching Communities</a>
-                            <a href="/kgr-rebuild/books-and-beyond/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">Books and Beyond</a>
-                            <a href="/kgr-rebuild/contact/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">Free Coaching</a>
+                            <a href="/exam-prep/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">KGR NBHWC Exam Prep</a>
+                            <a href="/services/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">KGR Practice Exam</a>
+                            <a href="/communities/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">Coaching Communities</a>
+                            <a href="/books-and-beyond/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">Books and Beyond</a>
+                            <a href="/contact/index.html" class="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-kgr-blue/5 hover:text-kgr-blue transition-all">Free Coaching</a>
                         </div>
                     </div>
                 </div>
-                <a href="/kgr-rebuild/contact/index.html" class="ml-4 px-6 py-2.5 btn-primary text-white text-sm font-semibold rounded-full shadow-lg">Contact Us</a>
+                <a href="/contact/index.html" class="ml-4 px-6 py-2.5 btn-primary text-white text-sm font-semibold rounded-full shadow-lg">Contact Us</a>
             </div><!-- Mobile Menu Button -->
             <button id="mobile-menu-toggle" class="lg:hidden p-2 text-gray-700 hover:text-kgr-blue">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -61,28 +66,28 @@
     <div id="mobile-menu" class="fixed inset-y-0 left-0 w-80 bg-white shadow-2xl z-[100] transform -translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
         <div class="p-6 space-y-6">
             <div class="flex items-center justify-between">
-                <img src="/kgr-rebuild/assets/images/kgrlogo.webp" class="h-16 w-auto" alt="KGR">
+                <img src="/assets/images/kgrlogo.webp" class="h-16 w-auto" alt="KGR">
                 <button id="mobile-menu-close" class="p-2 text-gray-500 hover:text-kgr-blue">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
             </div>
             <div class="space-y-1">
-                <a href="/kgr-rebuild/about/index.html" class="block px-4 py-3 text-sm font-semibold text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">Our Team</a>
-                <a href="/kgr-rebuild/services/index.html" class="block px-4 py-3 text-sm font-semibold text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">NBHWC Certification</a>
-                <a href="/kgr-rebuild/collaborative/index.html" class="block px-4 py-3 text-sm font-semibold text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">Coaching Collaborative</a>
+                <a href="/about/index.html" class="block px-4 py-3 text-sm font-semibold text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">Our Team</a>
+                <a href="/services/index.html" class="block px-4 py-3 text-sm font-semibold text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">NBHWC Certification</a>
+                <a href="/collaborative/index.html" class="block px-4 py-3 text-sm font-semibold text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">Coaching Collaborative</a>
             </div>
             <div class="border-t border-gray-100 pt-4">
                 <p class="px-4 text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Explore More</p>
                 <div class="space-y-1">
-                    <a href="/kgr-rebuild/exam-prep/index.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">KGR NBHWC Exam Prep</a>
-                    <a href="/kgr-rebuild/services/index.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">KGR Practice Exam</a>
-                    <a href="/kgr-rebuild/communities/index.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">Coaching Communities</a>
-                    <a href="/kgr-rebuild/books-and-beyond/index.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">Books and Beyond</a>
-                    <a href="/kgr-rebuild/contact/index.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">Free Coaching</a>
+                    <a href="/exam-prep/index.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">KGR NBHWC Exam Prep</a>
+                    <a href="/services/index.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">KGR Practice Exam</a>
+                    <a href="/communities/index.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">Coaching Communities</a>
+                    <a href="/books-and-beyond/index.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">Books and Beyond</a>
+                    <a href="/contact/index.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-kgr-blue hover:bg-kgr-blue/5 rounded-lg transition-all">Free Coaching</a>
                 </div>
             </div>
             <div class="pt-4">
-                <a href="/kgr-rebuild/contact/index.html" class="block w-full px-6 py-3 btn-primary text-white text-sm font-semibold rounded-full shadow-lg text-center">Contact Us</a>
+                <a href="/contact/index.html" class="block w-full px-6 py-3 btn-primary text-white text-sm font-semibold rounded-full shadow-lg text-center">Contact Us</a>
             </div>
         </div>
     </div>
@@ -130,25 +135,39 @@
             <!-- Right Form -->
             <div class="bg-white p-12 lg:p-16 rounded-[3rem] shadow-2xl shadow-slate-200/50 border border-slate-50 relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-kgr-cyan/10 rounded-bl-full opacity-50"></div>
-                <form class="relative z-10 space-y-8">
+                <form name="general-inquiry" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" class="relative z-10 space-y-8">
+                    <input type="hidden" name="form-name" value="general-inquiry">
+                    <p class="hidden">
+                        <label>Do not fill this out: <input name="bot-field"></label>
+                    </p>
+                    <input type="hidden" name="gclid">
+                    <input type="hidden" name="utm_source">
+                    <input type="hidden" name="utm_medium">
+                    <input type="hidden" name="utm_campaign">
+                    <input type="hidden" name="utm_term">
+                    <input type="hidden" name="utm_content">
                     <div class="grid sm:grid-cols-2 gap-8">
                         <div class="space-y-2">
                             <label class="text-sm font-bold text-slate-700">First Name</label>
-                            <input type="text" class="w-full px-6 py-4 bg-slate-50 border border-transparent rounded-2xl focus:bg-white focus:border-kgr-cyan/100 focus:ring-4 focus:ring-kgr-cyan/20 outline-none transition">
+                            <input type="text" name="first_name" required class="w-full px-6 py-4 bg-slate-50 border border-transparent rounded-2xl focus:bg-white focus:border-kgr-cyan/100 focus:ring-4 focus:ring-kgr-cyan/20 outline-none transition">
                         </div>
                         <div class="space-y-2">
                             <label class="text-sm font-bold text-slate-700">Last Name</label>
-                            <input type="text" class="w-full px-6 py-4 bg-slate-50 border border-transparent rounded-2xl focus:bg-white focus:border-kgr-cyan/100 focus:ring-4 focus:ring-kgr-cyan/20 outline-none transition">
+                            <input type="text" name="last_name" class="w-full px-6 py-4 bg-slate-50 border border-transparent rounded-2xl focus:bg-white focus:border-kgr-cyan/100 focus:ring-4 focus:ring-kgr-cyan/20 outline-none transition">
                         </div>
                     </div>
                     <div class="space-y-2">
                         <label class="text-sm font-bold text-slate-700">Email Address</label>
-                        <input type="email" class="w-full px-6 py-4 bg-slate-50 border border-transparent rounded-2xl focus:bg-white focus:border-kgr-cyan/100 focus:ring-4 focus:ring-kgr-cyan/20 outline-none transition">
+                        <input type="email" name="email" required class="w-full px-6 py-4 bg-slate-50 border border-transparent rounded-2xl focus:bg-white focus:border-kgr-cyan/100 focus:ring-4 focus:ring-kgr-cyan/20 outline-none transition">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-slate-700">Phone Number</label>
+                        <input type="tel" name="phone" class="w-full px-6 py-4 bg-slate-50 border border-transparent rounded-2xl focus:bg-white focus:border-kgr-cyan/100 focus:ring-4 focus:ring-kgr-cyan/20 outline-none transition">
                     </div>
                     <div class="space-y-2">
                         <label class="text-sm font-bold text-slate-700">How can we help?</label>
-                        <select class="w-full px-6 py-4 bg-slate-50 border border-transparent rounded-2xl focus:bg-white focus:border-kgr-cyan/100 outline-none transition">
-                            <option>Coach Training Program</option>
+                        <select name="interest" class="w-full px-6 py-4 bg-slate-50 border border-transparent rounded-2xl focus:bg-white focus:border-kgr-cyan/100 outline-none transition">
+                            <option>NBHWC Coach Training Program</option>
                             <option>Individual Coaching</option>
                             <option>Corporate Wellness</option>
                             <option>Other Inquiry</option>
@@ -156,9 +175,9 @@
                     </div>
                     <div class="space-y-2">
                         <label class="text-sm font-bold text-slate-700">Message</label>
-                        <textarea rows="4" class="w-full px-6 py-4 bg-slate-50 border border-transparent rounded-2xl focus:bg-white focus:border-kgr-cyan/100 outline-none transition"></textarea>
+                        <textarea rows="4" name="message" class="w-full px-6 py-4 bg-slate-50 border border-transparent rounded-2xl focus:bg-white focus:border-kgr-cyan/100 outline-none transition"></textarea>
                     </div>
-                    <button type="button" class="w-full bg-kgr-cyan text-white py-5 rounded-2xl font-bold shadow-lg shadow-kgr-cyan/30 hover:bg-kgr-blue transition transform hover:-translate-y-1 active:scale-95">Send Message</button>
+                    <button type="submit" class="w-full bg-kgr-cyan text-white py-5 rounded-2xl font-bold shadow-lg shadow-kgr-cyan/30 hover:bg-kgr-blue transition transform hover:-translate-y-1 active:scale-95">Send Message</button>
                 </form>
             </div>
         </div>
@@ -196,6 +215,16 @@
             // Close on nav link click
             menu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', closeMenu);
+            });
+
+            const params = new URLSearchParams(window.location.search);
+            const tracked = ['gclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+            tracked.forEach(key => {
+                const incoming = params.get(key);
+                if (incoming) localStorage.setItem('kgr_' + key, incoming);
+                document.querySelectorAll(`input[name="${key}"]`).forEach(input => {
+                    input.value = incoming || localStorage.getItem('kgr_' + key) || '';
+                });
             });
         });
     </script>
